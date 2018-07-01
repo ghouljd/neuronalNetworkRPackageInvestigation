@@ -1,0 +1,112 @@
+\chapter{Fundamentos Metodol\'ogicos}
+
+	A continuaci\'on se plantea la estructura a seguir por el presente trabajo, detallando el enfoque, tipo, nivel y dise\~no de la investigaci\'on y la metodolog\'ia a implementar entre otros.
+	
+\section{Enfoque de la investigaci\'on}
+	
+	La presente investigaci\'on se desarrollar\'a siguiendo un enfoque cuantitativo, puesto que, como lo indican Pallela y  Martins (2012) , “la investigaci\'on cuantitativa requiere el uso de instrumentos de medici\'on y comparaci\'on, que proporcionan datos cuyo estudio necesita la aplicaci\'on de m\'odelos matem\'aticos y estad\'isticos, el conocimiento est\'a basado en hechos”.  Los datos a usar en el desarrollo del paquete provienen de ensayo experimental desarrollado en los Laboratorios de Biofertilizante e Instrumentación Biólogica, adscritos al decanato de Investigación de la Universidad Nacional Experimental del Táchira .\\
+	
+\section{Tipo o nivel de investigaci\'on}
+	
+	Este proyecto plantea un tipo de investigaci\'on de campo, seg\'un como lo indican Pallela y  Martins (2012),  la investigaci\'on de campo “consiste en la recolecci\'on directamente de la realidad donde ocurren los hechos, sin manipular o controlar variables” ya que permite indagar los efectos de la interrelaci\'on entre los diferentes tipos de variable en lugar de los hechos.\\
+
+	En este punto se debe determinarla profundidad que abarca esta investigaci\'on, teniendo en cuenta que de acuerdo con  el nivel de la investigaci\'on es definido como “grado de profundidad con que se aborda un fen\'omeno u objeto de estudio” (Arias, 2012).\\
+
+	En este sentido, se tiene que dadas las caracter\'isticas del proyecto, se asocia con un nivel descriptivo, tal como lo indican Pallela y  Martins (2012),  “hace \'enfasis sobre conclusiones dominantes o sobre como una persona, grupo o cosa se conduce o funciona en el presente” esto debido a que se medir\'an los datos extra\'idos sin alterarlos para ser mostrados en el sistema.\\
+
+	Cuando se habla de un nivel descriptivo junto con una investigaci\'on de tipo de campo, en ella no se formulan hip\'otesis y las variables se enuncian en los objetivos de la investigaci\'on que se desarrollar\'a.
+	
+\section{Dise\~no de la investigaci\'on}
+	
+Seg\'un Arias(2012), el dise\~no de la investigaci\'on es “la estrategia general que adopta el investigador para responder al problema planteado” (p.21) por lo que es vital establecer una correcta secuencia de pasos para elaborar el prototipo de software que dar\'a soluci\'on a la problem\'atica principal de la investigaci\'on.\\
+
+Con este enfoque, se tiene que este trabajo seguir\'a un dise\~no no experimental, enfocado en el uso de informaci\'on existente, de acuerdo con lo dicho por Pallela y  Martins (2012) al definir el dise\~no no experimental como:\\
+
+Es el que se realiza sin manipular en forma deliberada ninguna variable. El investigador no sustituye intencionalmente las variables independientes. Se observan los hechos tal y como se presentan en su contexto real y en un tiempo determinado o no, para luego analizarlos. Por lo tanto, este dise\~no no se construye una situaci\'on espec\'ifica sino que se observan las que existen. Las variables independientes ya han ocurrido y no pueden ser manipuladas, lo que impide influir sobre ellas para modificarlas. (p.81)\\
+
+Esto indica que no hay manipulaci\'on de variables. Esta investigaci\'on presenta una modalidad de proyecto especial que, como lo indican Pallela y  Martins (2012), los proyectos especiales “destinados a la creaci\'on de productos que puedan solucionar deficiencias evidenciadas, se caracterizan por su valor innovador y aporte significativo” (p.92), ya que se crear\'a un \emph{software} aplicable al \'area de estudio.\\
+
+\section{Metodolog\'ia}
+
+Para el desarrollo del paquete  se seguir\'an las pautas est\'andar establecidas para la creación de paquetes y extensiones en R.\\
+
+\noindent
+\textbf{Creación del esqueleto del paquete.}\\
+
+
+En esta etapa se dise\~naran y crearan los directorios, ficheros y objetos que conformaran el paquete.\\ 
+
+\noindent
+\textbf{Registrar el m\'etodo para el env\'io y uso de funciones.}\\
+
+Es esta etapa del desarrollo se estableceran las dependencias sobre los paquetes de la base fuente de código R y sus métodos de conexión, considerando el manejo de versiones y los criterios de mantenimiento, además  se estableceran  los espacios de nombre o las estrategias para la búsqueda y utilización de las variables; unificando estos criterios a las funciones que seran dise\~nadas.\\
+
+\noindent
+\textbf{Dise\~no y codificaci\'on de las funciones.}\\
+
+Los m\'etodos para el dise\~no de las funciones primarias en R ser\'an los diagramas de flujo; y para su codificaci\'on se seguir\'an las normas de estilo para codificaci\'on en R, sugeridas por Wickham (2015) y por el creador del paquete \emph{formatR} Xie(2017), adem\'as se establecer\'an la dependencia con las funciones de c\'odigo base y las recomendadas para desarrollo en R.\\
+
+\noindent
+\textbf{Pruebas unitarias de las funciones.}\\
+
+Debido a que los paquetes en R est\'an conformados, entre otros elementos por las funciones primarias, a cada una de ellas se les realizaran pruebas unitarias en dos fases, la primera con datos sint\'eticos que permitan comprobar cada estado del diagrama de flujo, que esquematiza la soluci\'on num\'erica que permite el c\'alculo de cada uno de los \'indices fisiol\'ogicos para entre otra herramientas pueden utilizarse los paquetes de R\emph{RUnit} (Zenka, 2015) y \emph{testthat} (Wickham, 2017), y la segunda etapa donde cada funci\'on asociada a un \'indice fisiol\'ogico se le realizan prueban con los conjuntos de datos de prueba que formaran parte integral del paquete y con los cuales se desarrollaran los ejemplos pr\'acticos que conformaran la documentaci\'on que acompa\~a al paquete R.\\
+
+
+\newpage  
+\noindent
+\textbf{Chequear la carga del paquete.}\\
+
+En esta etapa del desarrollo se utilizaran las funciones de chequear paquete que ofrece el código R; cuya finalidad es verificar cada fichero del árbol de carpetas asociadas a cada elemento de la estructura o esqueleto del paquete, que a su vez creara el archivo de documentación en LaTeX y/o HTML, compilará el código fuente y creará las librerías de enlace dinámico (\emph{dynamic link library} DLL).\\  
+
+\noindent
+\textbf{Construcci\'on del m\'etodo de distribuci\'on del paquete.}\\
+
+Se seleccionara la forma de distribución del paquete desde el repositorio local, creando los ficheros fuentes  (en formato  \emph{tarball})  y en binario.\\
+
+\section{Aspectos administrativos}
+
+\vspace{1 cm}
+La realización de la investigación será planificada según lo establecido en el siguente diagrama:\\
+
+\begin{figure}[!ht]
+\begin{center}
+
+\begin{ganttchart}[y unit title=0.4cm,
+y unit chart=0.5cm,
+vgrid,hgrid,
+title height=1,
+bar/.style={draw,fill=cyan},
+bar incomplete/.append style={fill=yellow!50},
+bar height=0.7]{1}{16}
+ \gantttitle{Semanas}{16}\\
+ \gantttitle{Marzo}{5}
+ \gantttitle{Abril}{4} 
+\gantttitle{Mayo}{5}
+\gantttitle{Junio}{2}\\
+ \gantttitlelist{1,...,5}{1}
+ \gantttitlelist{1,...,4}{1}
+ \gantttitlelist{1,...,5}{1} 
+ \gantttitlelist{1,...,2}{1} \\
+ \ganttbar{\tiny{Determinación de los lineamientos para el dise\~no del paquete}}{1}{2} \\
+ \ganttbar{\tiny{Creación del esqueleto del paquete}}{3}{3} \\
+ \ganttbar{\tiny{Dise\~no de los algoritmos para la biblioteca de funciones}}{3}{6} \\
+ \ganttbar{\tiny{Codificación de la biblioteca de funciones}}{6}{10} \\
+ \ganttbar{\tiny{Prueba de la biblioteca de funciones}}{9}{11} \\
+ \ganttbar{\tiny{Documentación del paquete}}{4}{12} \\
+ \ganttbar{\tiny{Chequeo del paquete}}{10}{12} \\
+ \ganttbar{\tiny{Creación del método de distribución del paquete}}{13}{14} \\
+ \ganttbar{\tiny{Pruebas de distribución del paquete}}{15}{16} \\
+%  \ganttbar[progress=70]{Fase 3}{13}{18} \\
+ % \ganttbar[progress=40]{Conclus\~ao}{20}{24} \\
+ \ganttbar{\tiny{Realización del informe del proyecto especial de grado}}{2}{16} \\
+ \ganttlink{elem0}{elem1}
+ \ganttlink{elem6}{elem7}
+ \ganttlink{elem7}{elem8}
+\end{ganttchart}
+
+\end{center}
+\caption{Diagrama de Gantt con la planficación del proyecto especial de grado}
+\end{figure}
+
+
+	

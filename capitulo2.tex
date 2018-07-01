@@ -1,0 +1,239 @@
+\chapter{Fundamentos te\'oricos}
+
+\section{Antecedentes}
+
+
+
+
+\section{Bases Te\'oricas}
+
+\section{}
+
+
+
+
+\begin{enumerate}
+  \item 
+\end{enumerate}
+
+L
+\subsection{Lenguaje R.}
+
+
+
+R es un conjunto  integrado de \textit{software} de código abierto para el almacenamiento, manipulación, cálculo y visualización de datos para computación y gráficación estadística, puede ser compilado y ejecutado en  en Windows, Mac OS X y otras  plataformas UNIX (como Linux), se distribuye usualmente en formato binario (\url{https://www.r-project.org/about.html}, 2018). El proyecto de \emph{software} R fue iniciado por Robert Gentleman y Ross Ihaka. El lenguaje fue influenciado por  lenguaje S desarrollado originalmente en Bell Laboratories por John Chambers y sus colegas. Desde entonces ha evolucionado  para el cálculo estadístico asociado a diversas disciplinas para contextos académicos y comerciales. En R, la unidad fundamental de código compartible es el paquete, el cual agrupa código, datos, documentación y pruebas, y resulta simple de compartir con otros. Para enero del 2015 ya habían más de 6.000 paquetes disponibles en la Red Integral de Archivos de R, conocido comunmente por su acrónimo CRAN, el cual es el repositorio de paquetes . Esta gran variedad de paquetes es una de las razones por las cuales R es tan exitoso, pues es probable que algún investigador o académico ya haya resuelto un problema en su propio campo usando esta herramienta, por lo que otros usuarios simplemente podrán recurrir a ella para su uso directo o para llamarla en un nuevo código (Wickham,2015). \\
+
+
+\subsection{RStudio.}
+
+RStudio es un ambiente de desarrollo integrado (\textit{Integrated Development Environment}, IDE) que ofrece herramientas de desarrollo vía consola, editor de sintaxis que apoya la ejecución de código, así como herramientas para el trazado, la depuración y la gestión del espacio de trabajo.  RStudio está disponible para Windows, Mac y Linux o para navegadores conectados a RStudio Server o RStudio Server Pro (Debian / Ubuntu, RedHat / CentOS, y SUSE Linux) (\url{https://www.rstudio.com/about/}, 2018)
+ 
+
+\subsection{Estructura de paquetes en R/RStudio.}
+
+Requerimiento del núcleo (\textit{core})
+
+\begin{enumerate}
+  \item  DESCRIPTION: metadatos del package .\\
+La tarea del archivo Description es de gran importancia ya que es en el donde se registra la metadata, las dependencias que utiliza el paquete, la licencia y el soporte en caso de ocurrir errores con el mismo
+La estructura mínima para realizar un paquete en R es la siguiente:
+
+\begin{itemize}
+\item Package: mypackage
+\item Title: What The Package Does (one line, title case required)
+\item Version: 0.1
+\item Authors@R: person("First", "Last", email = "first.last@example.com",
+\item role = c("aut", "cre"))
+\item Description: What the package does (one paragraph)
+\item Depends: R (>= 3.1.0)
+\item License: What license is it under?
+\item LazyData: true
+\end{itemize}
+  \item \url{R /:} dirección del repositorio donde se encuentra el código del paquete (.R files).\\
+Se expondrán las buenas prácticas a la hora de realizar todo nuestro código en R, desde organización de las funciones, estilos de código y nombre de variables 
+
+\textbf{Organizar funciones en R:} aunque puedes organizar los archivos como desees, los dos extremos son malos no colocar todas las funciones en el mismo. archivo y no crear un archivo para para función, aunque si una función es muy grande o tiene mucha documentación se puede dar el caso, los nombres de los archivos tienen que ser significado y deben de terminar en R
+\begin{itemize}
+\item Bien  
+\begin{itemize}
+     \item fit\_models.R
+     \item utility\_functions.R
+  \end{itemize}
+\item Mal
+   \begin{itemize}
+      \item foo.r
+      \item stuff.r
+    \end{itemize}
+ \end{itemize}
+Se puede recomendar de acuerdo al número de función utilizar prefijo 
+
+\textbf{Nombres de Objetos:} Los nombres de las Variables y funciones deben de ser en min\'usculas, usar el gui\'on bajo ( \_ ) para separar palabras  
+\begin{itemize}
+\item Bien  
+\begin{itemize}
+     \item day\_one
+     \item day\_1
+  \end{itemize}
+\item Mal
+   \begin{itemize}
+      \item first\_day\_of\_the\_month
+      \item DayOne
+      \item dayone
+      \item djm1
+    \end{itemize}
+ \end{itemize}
+En lo posible no usar nombres de variables existentes esto causar\'a confusi\'on.
+
+\textbf{Espaciado:} Se recomienda colocar espacios alrededor de todos los operadores l\'ogicos y aritm\'eticos (=, +, -, \textless-, etc.). siempre coloque un espacio despu\'es de una coma, y nunca antes de ella.
+
+\begin{itemize}
+\item Bien  
+\begin{itemize}
+     \item average \textless- mean(feet / 12 + inches, na.rm = TRUE)
+  \end{itemize}
+\item Mal
+   \begin{itemize}
+      \item average\textless-mean(feet/12+inches,na.rm=TRUE)
+   \end{itemize}
+ \end{itemize}
+ 
+Hay una pequeña excepci\'on a esta regla: ( :, :: y :::) no necesitan espacios alrededor de ellos.
+
+\begin{itemize}
+\item Bien  
+\begin{itemize}
+     \item x \textless- 1:10
+     \item base::get
+  \end{itemize}
+\item Mal
+   \begin{itemize}
+      \item x \textless- 1 : 10
+     \item base :: get
+   \end{itemize}
+ \end{itemize}
+
+Dejar un espacio antes del par\'entesis izquierdo, excepto en la llamada a una funci\'on
+
+\begin{itemize}
+\item Bien  
+\begin{itemize}
+     \item if (debug) do(x)
+     \item plot(x,y)
+  \end{itemize}
+\item Mal
+   \begin{itemize}
+      \item if(debug)do(x)
+     \item plot(x, y)
+   \end{itemize}
+ \end{itemize}
+
+Se Utiliza mas de un espacio es caso que de mejore a la alineaci\'on, por ejemplo:\\
+\begin{list}{}{}
+\item list(
+    \begin{list}{}{} 
+       \item total \hspace{3mm}= a + b + c,
+       \item mean \hspace{2mm}= (a + b + c) / n
+    \end{list}
+\item )
+\end{list}
+No coloque espacios alrededor del c\'odigo entre par\'entesis o corchetes (a menos que haya una coma)
+\begin{itemize}
+\item Bien  
+\begin{itemize}
+     \item if (debug)  do(x)
+     \item diamonds[5, ]
+  \end{itemize}
+\item Mal
+   \begin{itemize}
+      \item if ( debug ) do(x) \textit{\# no espacios alredor de debug}
+      \item x[1,] \textit{\# necesita un espacio despues de la coma}
+      \item x[1 ,] \textit{\# el espacio va despues de la coma no antes}	   
+\end{itemize}
+ \end{itemize}
+
+\textbf{Llaves:} Una llave de apertura nunca debe ir en su propia l\'inea y siempre debe ir seguida de un nueva l\'inea. Una llave siempre debe ir en su propia l\'inea, a menos que sea seguida por otra y siempre sangr\'ia el c\'odigo dentro de las llaves
+\begin{itemize}
+\item Bien  
+\begin{itemize}
+     \item \begin{list}{}{} 
+		\item if (y \textless  \hspace{1mm} 0 \&\&  debug) \{
+		\begin{list}{}{}
+		\item message(``Y es negativo")
+		\end{list}
+		\item \}	
+	    \end{list}
+
+       \item \begin{list}{}{} 
+		\item if (y ==  \hspace{1mm} 0 ) \{
+		\begin{list}{}{}
+		   \item log(x)
+		\end{list}
+		\item \} else \{
+		\begin{list}{}{}
+		  \item y \^~  x
+		\end{list}
+		\item \}	
+	    \end{list}
+  \end{itemize}
+\item Mal
+   \begin{itemize}
+     \item \begin{list}{}{} 
+		\item if (y \textless  \hspace{1mm} 0 \&\&  debug)
+		\item message(``Y es negativo")
+	    \end{list}
+
+       \item \begin{list}{}{} 
+		\item if (y ==  \hspace{1mm} 0) \{
+		\begin{list}{}{}
+		   \item log(x)
+		\end{list}
+		\item \}
+		\item else \{
+		\begin{list}{}{}
+		  \item y \^~  x
+		\end{list}
+		\item \}	
+	    \end{list}   
+\end{itemize}
+ \end{itemize}
+
+Sentencias  muy cortar esta bien dejarla en la misma l\'inea.\\
+if(y \textless \hspace{1mm} 0 \&\& debug) message(``Y es negativo")\\
+
+\textbf{Longitud de L\'inea:} cada l\'inea debe de llevar m\'aximo 80 carateres, si se queda sin espacio es recomendable utilzar una funci\'on separada\\
+
+\textbf{Sangria:} Utilize sangria de 2 espacios, nunca use tablulador o multiples tabuladores o espacios. la unica expeci\'on es cuando se define una sentencia en multiples l\'ineas.\\
+\begin{tabular}{ccc}
+long\_function\_name \textless- function(& a = ``a long argument", \\ 
+ &  b = ``another argument", \\
+ &  b = ``another argument", \\
+\end{tabular}
+\newline
+
+\textbf{Asignaci\'on:} Usar el \textless-, y no =
+\begin{itemize}
+\item Bien  
+\begin{itemize}
+     \item x \textless- 5
+  \end{itemize}
+\item Mal
+   \begin{itemize}
+      \item x = 5
+   \end{itemize}
+ \end{itemize}
+
+  \item man/: documentación.\\
+  \item NAMESPACE: específica que objetos conforman el paquete.\\
+\end{enumerate}
+\textbf{Comentarios:} Comente tu codig\'o, el comentario comienza \#, los comentarios deben de explicar el porque, no el que.\\ use los caracteres (-) y (=) para separar lineas\\
+{\# Load data - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -}\\
+{\# Plot data - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -}\\
+
+
+
+ 
+\subsection{Glosario}
+
+\paragraph{R}: 
+
+
