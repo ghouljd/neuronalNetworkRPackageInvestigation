@@ -2,10 +2,43 @@
 
 \section{Planteamiento y formulaci\'on del problema}
 
+Una red neuronal artificial (ANN) es un modelo que crea una relacion entre una configuracion de senales de entrada y una senal de salida usando un modelo derivado de nuestro entendimiento de como el cerebro responde a determinados estimulos de entradas sensoriales. Asi como un cerebro usa ese conjunto de celulas interconectadas llamadas neuronas, asi las ANN usan una red de neuronal artificiales o nodos para solucionar problemas aprendidos (Lantz B, 2015).\\
 
+En general, las ANN son aprendices versatiles que pueden ser aplicarse a cais cualquier tarea de aprendizaje en cualquier contexto, clasificacion, prediccion, reconocimiento de patrones e incluso pudieramos hablar de tareas de supervision de procesos. Las ANN, se aplican mejor a los problemas cuyos datos de entrada y salida son bien definidos o bastante simples, sin embargo el proceso que relaciona la entrada con una determinada salida es en extremo complejo, por eso se conocen como un metodo de caja negra (Lantz B, 2015).\\
 
+De una manera muy arcaica, las ANN han sido usadas desde hace cincuenta anos para simular como el cerebro humano es capaz de resolver problemas. Primero surgieron las simples funciones logicas AND y OR, que ayudaron a los cientificos a entender como biologicamente el cerebro opera. Sin embargo, como el avance tecnologico y computacional ha sido incrementado y continua creciendo potencialmente durante los ultimos anos, las ANN ha incrementado su complejidad siendo usadas frecuentemente en multiples problemas como:
 
+\begin{enumerate}
+    \item{Programas de reconocimiento de voz y escritura, como los que usan los correo de voz
+de los servicios de transcripción y máquinas clasificadoras de correo postal.}
+	\item{La automatización de dispositivos inteligentes como los controles ambientales de un edificio de oficinas o automóviles autodirigidos y drones autoguiados.}
+	\item{Modelos sofisticados de patrones climáticos y otros fenómenos científicos, sociales o económicos.}
+	\item{La clasificacion y reconocimiento de cualquier cosa, basado en sus atributos y caracteristicas.}
+\end{enumerate} 
 
+Existen muchos metodos y lenguajes que permiten la estructuracion y desarrollo de ANN, destacandose lenguajes como Python y softwares como Statgraphics y SPSS, sin embargo como el objetivo de esta investigacion es trabajar con una variable de tipo espacial que amerita la aplicacion de regresion espacial antes para la normalizacion de los datos recogidos y observados, se propone el uso del lenguaje  R con el paquete neuralnet para el manejo y construcciond de la red neuronal.\\
+
+R es un lenguaje de programación y entornos para graficos y calculos estadisticos, es una implementacion diferente al lenguaje S (Chambers, 1998), y se desarrolla bajo un proyecto de software bajo Licencia Publica General (General Public License, GNU) de la Free Software Foundation (https://www.fsf.org/) en forma de codigo fuente. Se compila y se ejecuta en una amplia variedad de plataformas entre ellas FreeBSD, Linux, Windows y MacOS. (The R Project for Statistical Computing, 2018).\\
+
+El paquete neuralnet es un paquete del lenguaje R de muy sencilla utilizacion que permite la aplicacion, visualizacion e implementacion de redes neuronales. El paquete permite configuraciones flexibles a traves de
+eleccion personalizada del error y función de activacion. Ademas, el calculo de pesos generalizados esta implementado (CRAN-R Project, 2016).\\
+
+Esta propuesta permitira ajustar y entrenar una red neuronal artificial probabilistica que permita la clasificacion de densidades de siembra de papa yema de huevo (Solanum Phureja) teniendo como entrada las siguientes variables: 
+
+\begin{enumerate}
+    \item{\textbf{Peso total del cultivo.} Variable cuantitativa expresada en gramos (gr), que indica el peso de todos los tuberculos recogidos en la siembra.}
+	\item{\textbf{Total de tuberculos recogidos.} Variable cuantitativa que indica el numero de tuberculos recogidos en la siembra.}
+	\item{\textbf{Diametro ponderado de todos los tuberculos.} Variable cuantitativa expresada en centimetros (cm), que indica el calculo del diametro ponderado (por los tuberculos ser ovoides) de cada tuberculo recogido en la siembra.}
+	\item{\textbf{Calibre de los tuberculos recogidos.} Variable cualitativa, con 4 valores posibles que definen a que calibre pertenece un tuberculo. Siendo los calibres dividivos en tuberculos menores a dos centimetros (<2cm), entre dos y cuatro centimetros (2-4cm), entre cuatro y seis centimetros (4-6cm) y mayores a seis centimetros (6cm).}
+\end{enumerate}
+
+La densidad de siembra es la distancia entre plantas y leras o sencillamente cuantas plantas son sembradas por metro cuadrado de siembra.\\
+
+El objetivo es comparar los resultados de clasificacion alimentando la red con datos observados y con los mismos datos normalizados espacialmente a traves de regresion espacial, para observar si es necesario el analisis de los datos recogidos antes de la clasificacion y a su vez concluir hasta que punto la densidad de siembra afecta las variables antes mencionadas. Otra de las pruebas que se plantea usar en esta investigacion es realizar los analisis eliminando variables de entrada atisbando cuales variables permiten y generan una mejor clasificacion.\\
+
+La curva ROC es una herramienta estadistica utilizada en analisis de clasificacion para determinar la capacidad discriminante de una prueba diagnostica dicotomica. Esta capacidad discriminante esta sujeta al valor umbral elegido de entre todos los posibles resultados de la variable de decision, es decir, la variable por cuyo resultado se clasifica (en nuestro caso la densidad de siembra) en un determinado grupo. La curva es el grafico resultante de representar, para cada valor umbral, las medidas de sensibilidad y especificidad de la prueba diagnostica (Benavides A, NF).\\
+
+Posterior a las diversas clasificaciones planteadas, se propone la construccion en lenguaje R de las curvas ROC correspondientes para determinar cuan optima es la clasificacion resultante, permitiendo asi llegar a las conclusiones deseadas. 
 
 \section{Objetivos}
 
@@ -21,7 +54,11 @@
 
 \section{Justificaci\'on e Importancia}
 
-	
-	
+Colombia es el mayor productor, consumidor y exportador de papas diploides en el mundo; tiene una ventaja competitiva notable debido a ser centro de diversidad y poseer gran aceptacion por los consumidores debido a las caracteristicas del tuberculo. Adicionalmente, en este pais se ha desarrollado una amplia tradicion como cultivo tecnificado, con potencial de industrializacion y exportacion (Rodriguez - Ñustez - Estrada, 2009). Ademas de contar con uno de los recursos geneticos que ofrece las mayores oportunidades de exportacion como alimento procesado exclusivo y sin competencia. Desafortunadamente, muchas de las estrategias de manejo del cultivo de la papa, han sido adaptadas a papa criolla, creando un sistema productivo poco eficiente (Piñeros, 2009). Los altos precios de los insumos agricolas y el mal manejo de los cultivos agronomicamente provoca  baja productividad y amenaza la competitividad del sistema de produccion, por lo que es importante identificar factores limitantes del rendimiento y desarrollar practicas innovadoras para el cultivo, tales como una gestion nutricional integrada y equilibrada, que es una de las practicas mas eficientes para garantizar a la planta la oportunidad de expresar su potencial genetico que eventualmente se reflejara en una mejor calidad y rendimiento (Lopez - Gomez - Rodriguez, 2014).\\
+ 
+Varias investigaciones revelan que el tamano promedio de los tuberculos, su variabilidad y su conteo, definen una unica distribucion, presentando mayor variabilidad de rangos de tamano en la etapa final de llenado, con aumento del rendimiento de los mayores tamanos por cuenta de los tamanos inferiores, lo que sugiere que un tuberculo que pasa de un calibre inferior al siguiente, no es sustituido por otro de calibre anterior, ademas, parece existir una correlacion negativa entre la variabilidad relativa del tamano del tuberculo y el numero de tuberculos por unidad de area (Struik, 1991). Es importante reconocer, que debe tenerse cuidado con la interpretacion de esta correlacion, pues hasta cierto punto, la naturaleza de los datos asociados al numero de tuberculos por planta pudiera ser similar a la de los datos composicionales, es decir, si un componente aumenta, el otro esta forzado a disminuir, lo que genera correlaciones sin conexion logica en datos verdaderamente composicionales, sin embargo, el numero de tuberculos por calibre no suma una constante, pudiera ocurrir que su maximo posea una distribucion especifica, entonces una mayor cantidad de tuberculos de un calibre podria provocar un numero menor de tuberculos en otro calibre especifico, lo que en esencia puede generar correlaciones en las que debe tenerse mucho cuidado al momento de su interpretacion. La importancia del cultivo obliga a muchos investigadores a realizar diferentes estudios para mejorarlo segun el uso que vaya a darse a los tuberculos, generando nuevas variedades resistentes a plagas y enfermedades y de facil adaptacion a diferentes climas, procurando hacer uso del espacio de siembra de forma optima, por lo que varios estudios evidencian el estudio de la densidad de siembra para evaluar sobre todo el rendimiento. En 2017, Darghan evaluo en lugar del rendimiento, un indicador que se asocia directamente como lo es el calibre de los tuberculos, los cuales en la practica se manipulan en cuatro categorias de diametro promedio (hasta 2 cm, de 2 a 4 cm, de 4 a 6 cm y más de 6 cm). La naturaleza de esta variable imposibilita usualmente la comparacion de la respuesta (conteos de tubérculos) para cada densidad de siembra (definidas como 30cm*100cm, 40cm*100cm y 50cm*100cm) mediante analisis de varianza, pues en el caso de conteos, otras distribuciones como la Poisson y la Binomial negativa se adaptan mucho mejor al tipo de dato generado. Los modelos clasicos de regresion Poisson y binomial y negativa, en sus modalidades usuales o en la opción inflada por ceros (Cameron, 1998) en datos de conteo pertenecen a la familia de modelos lineales generalizados (Zeileis, 2008) y los desarrollos recientes permiten generar varias estadisticas que permiten su comparacion con sus contrapartes sin ceros en exceso, lo que resulta util en la eleccion del mejor modelo para relacionar predictores y respuesta en conteos. (Darghan E - Bernal E - Rodriguez L, 2017)\\
+
+
+
 \section{Alcance y Limitaciones}
 
