@@ -12,18 +12,42 @@ En 2017, Bernal N realizo un estudio de campo con el cultivo de papa criolla par
 
 \section{Bases Te\'oricas}
 
+\subsection{Regresión Espacial.}
+
+El análisis exploratorio de datos espaciales - AEDE, constituye una disciplina reciente que ha adquirido una especial importancia debido principalmente al avance de la tecnología en las comunicaciones y la globalización de la economía. Los sucesos que ocurren en una ubicación específica tienen repercusiones sobre sus vecinos directos e incluso sobre otros, aparentemente remotos. \\
+
+En el estudio de cualquier fenómeno de carácter social o económico la ubicación geográfica de los agentes constituye un aspecto importante dentro de la especificación de los modelos econométricos, ya que puede existir algún efecto espacial, que de no ser incorporado en la especificación, podría afectar la validez del modelo. Ante esta realidad y gracias al desarrollo tecnológico de los sistemas de georreferenciación de datos, surge la necesidad de contar con herramientas apropiadas para el procesamiento, descripción y análisis de la información ya que los métodos tradicionales de la estadística descriptiva no tienen en cuenta la localización geográfica de los datos.\\
+
+Teniendo en cuenta que la econometría tradicional no ha incorporado el efecto de dichas circunstancias y que la estadística espacial se ocupa de otro tipo de problemas, ha surgido una disciplina a la cual se le ha dado el nombre de econometría espacial. Según Luc Anselin, uno de sus principales investigadores, “las actividades como la estimación de modelos espaciales de interacción, el análisis estadístico de la función de densidad urbana y la implementación empírica de modelos econométricos regionales, podrían ser considerados econometría espacial” (Anselin, 1988).\\
+
+Cuando se tienen observaciones georreferenciadas, se deben utilizar herramientas que permitan detectar ciertas características dentro de los datos, como son tendencia, valores atípicos, esquemas de asociación y
+dependencia espacial, concentración espacial o puntos calientes/fríos, entre otros.\\
+Aunque en la actualidad se tiene gran cantidad de información georreferenciada, estos datos suelen ser tratados con herramientas del análisis de series temporales (o de corte transversal, no espacial), sin usar técnicas adecuadas para el análisis estadístico espacial. Los métodos que permiten extraer dichas características de los datos georreferenciados se conocen con el nombre de análisis exploratorio de datos espaciales (AEDE) y se conciben como una disciplina dentro del análisis estadístico más general, diseñada para el tratamiento específico de los datos geográficos. El AEDE se utiliza para identificar relaciones sistemáticas entre variables, o dentro de una misma variable, cuando no existe un conocimiento claro sobre su distribución en el espacio geográfico (Chasco Yrigoyen, 2006).
+
+\subsection{Redes Neuronales Artificiales.}
+
+Entre las definiciones más recientes de inteligencia artificial se expresa, en forma general, la inteligencia artificial como la capacidad que tienen las máquinas para realizar tareas que en el momento son realizadas por seres humanos; otros autores como Nebendah (1988) y Delgado (1998) dan definiciones más completas y las definen como el campo de estudio que se enfoca en la explicación y emulación de la conducta inteligente en función de procesos computacionales basados en la experiencia y el conocimiento continuo del ambiente. Autores como Marr (1977), Mompin (1987), Rolston (1992), en sus definiciones involucran los términos de soluciones a problemas muy complejos.\\
+
+El nacimiento de la inteligencia artificial se sitúa en los años cincuenta; en esa fecha la informática apenas se había desarrollado, y ya se planteaba la posibilidad de diseñar máquinas inteligentes. Hoy en día se habla de vida artificial, algoritmos genéticos, computación molecular o redes neuronales. En algunas de estas ramas los resultados teóricos van muy por encima de las realizaciones prácticas.\\
+
+A través de los años, se han utilizado diversas técnicas de inteligencia artificial para emular 'comportamientos inteligentes'. Al software que hace uso de dichas técnicas se le denomina, de forma genérica, 'sistema inteligente', y es cada vez más amplia la gama de aplicaciones financieras donde incide la inteligencia artificial.\\
+
+Un ejemplo de esto es que al usarse una tarjeta de crédito, suelen acumularse datos sobre patrones de consumo que después se venderán a diversas empresas. Sobre la base de los pagos efectuados en dicha tarjeta de crédito, los bancos e instituciones de crédito irán elaborando un historial del usuario, el cual se utilizará para autorizar una transacción, para decidir cuándo extender el crédito y para detectar fraudes. Este tipo de procesos requiere de chequeos que suelen resultar bastante complejos, además del uso de criterios variables para poder tomar una decisión final en torno a la autorización de una cierta transacción. Claro que, al manejar enormes volúmenes de información, como los aproximadamente 16 millones de transacciones que Visa Internacional debe verificar diariamente, no resulta nada fácil poder detectar un fraude. Aunque es evidente la necesidad de automatizar procesos como éste, no es del todo obvio incorporar el comportamiento inteligente del ser humano a un programa de computadora que reemplace a un evaluador humano, ya que los sistemas de inteligencia artificial se toman como herramientas de apoyo analítico para el evaluador, mas no como una unidad autosuficiente que por sí sola pueda tomar decisiones.\\
+
+Las redes neuronales artificiales son eficientes en tareas tales como el reconocimiento de patrones, problemas de optimización o clasificación, y se pueden integrar en un sistema de ayuda a la toma de decisiones, pero no son una panacea capaz de resolver todos los problemas: todo lo contrario, son modelos muy especializados que pueden aplicarse en dominios muy concretos.\\
+
+Las redes neuronales emulan la estructura y el comportamiento del cerebro, utilizando los procesos de aprendizaje para buscar una solución a diferentes problemas; son un conjunto de algoritmos matemáticos que encuentran las relaciones no lineales entre conjuntos de datos; suelen ser utilizadas como herramientas para la predicción de tendencias y como clasificadoras de conjuntos de datos. Se denominan neuronales porque están basadas en el funcionamiento de una neurona biológica cuando procesa información.
+
+\subsection{Curvas ROC.}
+
+Una amplia gama de tests diagnósticos reportan sus resultados cuantitativamente, utilizando escalas contínuas. El análisis de curvas ROC (receiver operating characteristic curve) constituye un método estadístico para determinar la exactitud diagnóstica de estos tests, siendo utilizadas con tres propósitos específicos: determinar el punto de corte de una escala continua en el que se alcanza la sensibilidad y especificidad más alta, evaluar la capacidad discriminativa del test diagnóstico y comparar la capacidad discriminativa de dos o más tests diagnósticos que expresan sus resultados como escalas continuas.
+
 \subsection{Lenguaje R.}
 
 R es un conjunto  integrado de \textit{software} de código abierto para el almacenamiento, manipulación, cálculo y visualización de datos para computación y gráficación estadística, puede ser compilado y ejecutado en  en Windows, Mac OS X y otras  plataformas UNIX (como Linux), se distribuye usualmente en formato binario (\url{https://www.r-project.org/about.html}, 2018). El proyecto de \emph{software} R fue iniciado por Robert Gentleman y Ross Ihaka. El lenguaje fue influenciado por  lenguaje S desarrollado originalmente en Bell Laboratories por John Chambers y sus colegas. Desde entonces ha evolucionado  para el cálculo estadístico asociado a diversas disciplinas para contextos académicos y comerciales. En R, la unidad fundamental de código compartible es el paquete, el cual agrupa código, datos, documentación y pruebas, y resulta simple de compartir con otros. Para enero del 2015 ya habían más de 6.000 paquetes disponibles en la Red Integral de Archivos de R, conocido comunmente por su acrónimo CRAN, el cual es el repositorio de paquetes . Esta gran variedad de paquetes es una de las razones por las cuales R es tan exitoso, pues es probable que algún investigador o académico ya haya resuelto un problema en su propio campo usando esta herramienta, por lo que otros usuarios simplemente podrán recurrir a ella para su uso directo o para llamarla en un nuevo código (Wickham,2015). \\
 
-
 \subsection{RStudio.}
 
-RStudio es un ambiente de desarrollo integrado (\textit{Integrated Development Environment}, IDE) que ofrece herramientas de desarrollo vía consola, editor de sintaxis que apoya la ejecución de código, así como herramientas para el trazado, la depuración y la gestión del espacio de trabajo.  RStudio está disponible para Windows, Mac y Linux o para navegadores conectados a RStudio Server o RStudio Server Pro (Debian / Ubuntu, RedHat / CentOS, y SUSE Linux) (\url{https://www.rstudio.com/about/}, 2018)
- 
-
-\subsection{Glosario}
-
-\paragraph{R}: 
+RStudio es un ambiente de desarrollo integrado (\textit{Integrated Development Environment}, IDE) que ofrece herramientas de desarrollo vía consola, editor de sintaxis que apoya la ejecución de código, así como herramientas para el trazado, la depuración y la gestión del espacio de trabajo.  RStudio está disponible para Windows, Mac y Linux o para navegadores conectados a RStudio Server o RStudio Server Pro (Debian / Ubuntu, RedHat / CentOS, y SUSE Linux) (\url{https://www.rstudio.com/about/}, 2018).
 
 

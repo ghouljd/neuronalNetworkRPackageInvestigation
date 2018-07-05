@@ -28,40 +28,32 @@ Esto indica que no hay manipulaci\'on de variables. Esta investigaci\'on present
 
 \section{Metodolog\'ia}
 
-Para el desarrollo del paquete  se seguir\'an las pautas est\'andar establecidas para la creación de paquetes y extensiones en R.\\
+Los pasos a seguir en el desarrollo de esta investigacion seran descritos a continuacion siendo basados en los antecedentes y estudios realizados.\\
 
 \noindent
-\textbf{Creación del esqueleto del paquete.}\\
+\textbf{Explorar y manipular la data.}\\
 
-
-En esta etapa se dise\~naran y crearan los directorios, ficheros y objetos que conformaran el paquete.\\ 
-
-\noindent
-\textbf{Registrar el m\'etodo para el env\'io y uso de funciones.}\\
-
-Es esta etapa del desarrollo se estableceran las dependencias sobre los paquetes de la base fuente de código R y sus métodos de conexión, considerando el manejo de versiones y los criterios de mantenimiento, además  se estableceran  los espacios de nombre o las estrategias para la búsqueda y utilización de las variables; unificando estos criterios a las funciones que seran dise\~nadas.\\
+Los datos tomados de la investigacion de Bernal, son datos reales observados de un cultivo de tuberculos de papa criolla que no han sido tratados estadisticamente o modelados, es por eso que en esta etapa se disenara un algoritmo para la carga de los mismos en estructuras de datos en R, para luego ser modelados y analizados espacialmente por medio de regresion espacial y probando de igual forma su normalizacion bivariante.\\
 
 \noindent
-\textbf{Dise\~no y codificaci\'on de las funciones.}\\
+\textbf{Disenar y entrenar la red neuronal probabilistica.}\\
 
-Los m\'etodos para el dise\~no de las funciones primarias en R ser\'an los diagramas de flujo; y para su codificaci\'on se seguir\'an las normas de estilo para codificaci\'on en R, sugeridas por Wickham (2015) y por el creador del paquete \emph{formatR} Xie(2017), adem\'as se establecer\'an la dependencia con las funciones de c\'odigo base y las recomendadas para desarrollo en R.\\
-
-\noindent
-\textbf{Pruebas unitarias de las funciones.}\\
-
-Debido a que los paquetes en R est\'an conformados, entre otros elementos por las funciones primarias, a cada una de ellas se les realizaran pruebas unitarias en dos fases, la primera con datos sint\'eticos que permitan comprobar cada estado del diagrama de flujo, que esquematiza la soluci\'on num\'erica que permite el c\'alculo de cada uno de los \'indices fisiol\'ogicos para entre otra herramientas pueden utilizarse los paquetes de R\emph{RUnit} (Zenka, 2015) y \emph{testthat} (Wickham, 2017), y la segunda etapa donde cada funci\'on asociada a un \'indice fisiol\'ogico se le realizan prueban con los conjuntos de datos de prueba que formaran parte integral del paquete y con los cuales se desarrollaran los ejemplos pr\'acticos que conformaran la documentaci\'on que acompa\~a al paquete R.\\
-
-
-\newpage  
-\noindent
-\textbf{Chequear la carga del paquete.}\\
-
-En esta etapa del desarrollo se utilizaran las funciones de chequear paquete que ofrece el código R; cuya finalidad es verificar cada fichero del árbol de carpetas asociadas a cada elemento de la estructura o esqueleto del paquete, que a su vez creara el archivo de documentación en LaTeX y/o HTML, compilará el código fuente y creará las librerías de enlace dinámico (\emph{dynamic link library} DLL).\\  
+En esta estapa se definiran las variables de entrada y se declararan las neuronas patrones y las clases de salida que permitiran la clasificacion, para proceder con el entrenamiento de la red que se hara a traves del metodo de jackknifing para determinar el parametro de escalamiento correcto que permita la mejor clasificacion.\\
 
 \noindent
-\textbf{Construcci\'on del m\'etodo de distribuci\'on del paquete.}\\
+\textbf{Implementar y realizar pruebas de clasificacion.}\\
 
-Se seleccionara la forma de distribución del paquete desde el repositorio local, creando los ficheros fuentes  (en formato  \emph{tarball})  y en binario.\\
+El objetivo de esta etapa es definir los casos de prueba que seran usados para buscar la mejor clasificacion de densidad de siembra de tuberculos de papa criolla y realizar las pruebas con los diferentes escenarios a preparar.\\
+
+\noindent
+\textbf{Comparacion de resultados.}\\
+
+En este paso se procedera a la construccion de las curvas ROC asociadas a los casos de prueba planteados para asi obtener las mejores clasificaciones, permitiendo concluir las mejores relaciones entre variables, el mejor manejo de los datos y si los mismos deben ser modelados o es suficientemente buena una clasificacion con datos observados a pesar de la dependencia espacial existente.\\
+
+\noindent
+\textbf{Graficar y documentar resultados.}\\
+
+Finalmente se procedera a la graficacion por medio de R de los resultados, que sustenten las conclusiones realizadas y a relizar la documentacion que permita el uso de esta investigacion en futuras aplicaciones de campo.\\  
 
 \section{Aspectos administrativos}
 
@@ -79,29 +71,26 @@ bar/.style={draw,fill=cyan},
 bar incomplete/.append style={fill=yellow!50},
 bar height=0.7]{1}{16}
  \gantttitle{Semanas}{16}\\
- \gantttitle{Marzo}{5}
- \gantttitle{Abril}{4} 
-\gantttitle{Mayo}{5}
-\gantttitle{Junio}{2}\\
- \gantttitlelist{1,...,5}{1}
+ \gantttitle{Julio}{2}
+ \gantttitle{Agosto}{4} 
+ \gantttitle{Septiembre}{4}
+ \gantttitle{Octubre}{5}\\
+ \gantttitle{Noviembre}{1}\\
+ \gantttitlelist{1,...,2}{1}
  \gantttitlelist{1,...,4}{1}
+ \gantttitlelist{1,...,4}{1} 
  \gantttitlelist{1,...,5}{1} 
- \gantttitlelist{1,...,2}{1} \\
- \ganttbar{\tiny{Determinación de los lineamientos para el dise\~no del paquete}}{1}{2} \\
- \ganttbar{\tiny{Creación del esqueleto del paquete}}{3}{3} \\
- \ganttbar{\tiny{Dise\~no de los algoritmos para la biblioteca de funciones}}{3}{6} \\
- \ganttbar{\tiny{Codificación de la biblioteca de funciones}}{6}{10} \\
- \ganttbar{\tiny{Prueba de la biblioteca de funciones}}{9}{11} \\
- \ganttbar{\tiny{Documentación del paquete}}{4}{12} \\
- \ganttbar{\tiny{Chequeo del paquete}}{10}{12} \\
- \ganttbar{\tiny{Creación del método de distribución del paquete}}{13}{14} \\
- \ganttbar{\tiny{Pruebas de distribución del paquete}}{15}{16} \\
-%  \ganttbar[progress=70]{Fase 3}{13}{18} \\
- % \ganttbar[progress=40]{Conclus\~ao}{20}{24} \\
+ \gantttitlelist{1,...,1}{1}\\
+ \ganttbar{\tiny{Explorar y manipular la data}}{1}{2} \\
+ \ganttbar{\tiny{Disenar y entrenar la red neuronal probabilistica}}{3}{7} \\
+ \ganttbar{\tiny{Implementar y realizar pruebas de clasificacion.}}{8}{11} \\
+ \ganttbar{\tiny{Comparacion de resultados}}{12}{14} \\
+ \ganttbar{\tiny{Graficar y documentar resultados}}{15}{16} \\
  \ganttbar{\tiny{Realización del informe del proyecto especial de grado}}{2}{16} \\
  \ganttlink{elem0}{elem1}
- \ganttlink{elem6}{elem7}
- \ganttlink{elem7}{elem8}
+ \ganttlink{elem1}{elem2}
+ \ganttlink{elem2}{elem3}
+ \ganttlink{elem3}{elem4}
 \end{ganttchart}
 
 \end{center}
