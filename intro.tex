@@ -3,10 +3,40 @@
 \chapter*{Introducci\'on}
 \pagenumbering{arabic} % para empezar la numeración con números
 
-En los cultivos de papa criolla son muchas las variables que influyen en la cosecha de tub\'erculos, tales como la temperatura, altura del terreno, clima, tipo y composici\'on del suelo, densidad de siembra, entre otros y las personas interesadas en este proceso siempre han buscado manipularlas para no solo mejorar la calidad del producto, si no para obtenerlo con ciertas caracter\'isticas que sean convenientes para su fin, como por ejemplo la piel, contextura, pero muy sobre todo el tama\~no de los tub\'erculos ya que existen diferentes intereses industriales en esta \'ultima caracter\'istica.\\
+En los cultivos de papa criolla (\textit{Solanum phureja}) son muchas las variables que influyen en la cosecha de tub\'erculos, tales como la temperatura, altura del terreno, clima, tipo y composici\'on del suelo, densidad de siembra, entre otros. Los encargados y personas interesadas en este proceso siempre han buscado manipularlas,  no sólo para mejorar la calidad del producto, si no para obtenerlo caracter\'isticas que sea convenientes, como el tama\~no de los tub\'erculos ya que existen intereses industriales diferentes para su comercializaci\'on.\\
 
-Investigaciones anteriores concluyeron que la densidad de siembra es una variable con una afectaci\'on considerable en el tama\~no de los tub\'erculos producidos por las plantas en su ciclo de cosecha, sin embargo la manipulaci\'on de esta variable en dichas investigaci\'ones fue de tipo lineal, sin tener en cuenta ciertas condiciones espaciales que posee como propiedades esta variable, por la misma representar la distancia entre calles y surcos, y distancia entre plantas a la que se siembra, o expresado de otra manera cuantas plantas son sembradas por metro cuadrado en un terreno. La densidad de siembra es una variable cualitativa que aunque se trata de distancias se define en densidades predeterminadas como d1 = 50x30cm, donde d1 es una densidad definida igual a un espacio entre surcos de 50cm y distancia entre plantas de 30cm.\\
+Investigaciones anteriores concluyeron que la densidad de siembra es una variable con una afectaci\'on considerable en el tama\~no de los tub\'erculos producidos por las plantas en su ciclo de cosecha, sin embargo la manipulación de esta variable generalmente se maneja de forma lineal sin tener en cuenta, ciertas condiciones espaciales que posee como propiedades esta variable, por  ser distancias entre calles y surcos, y distancia entre plantas a la que se siembra, o expresado de otra manera cuantas plantas son sembradas por metro cuadrado en un terreno.\\
 
-El objetivo de esta investigaci\'on es construir un paquete en Lenguaje R que permita a trav\'es de una entrada, propuesta como una matriz cargada con los datos observados de cultivo, clasificar los tub\'erculos de papa criolla cosechados en densidades de siembra seg\'un el peso total del cultivo, peso total de tub\'erculos y diam\'etro de cada tub\'erculo a trav\'es de una red neuronal probabil\'istica entrenada con datos del cultivo anteriormente recogidos. La red neuronal se encargar\'a de clasificar basado en sus neuronas entrenadas a trav\'es de datos conocidos con anterioridad por lo que no es de importancia el hecho de que no exista una relacion entre estas variables ya que no requiere de supuestos estad\'isticos para realizar el proceso de clasificaci\'on. Los datos que ser\'an usados en la presente investigaci\'on fueron recogidos y observados de la cosecha de un cultivo de tub\'erculos de papa criolla realizado en el Centro Agropecuario Marengo de la Universidad Nacional de Colombia, en el departamento de Cundinamarca en Colombia (74°12'58.51''W;4°40'52.92''N), el cual tiene una altitud de 2516 msnm y una temperatura media de 14 °C.\\
+La densidad de siembra es una variable cualitativa que aunque se trata de distancias se definen en densidades predeterminadas como d$_1$ = 50x30cm, donde d$_1$ es una densidad definida igual a un espacio entre surcos de 50cm y distancia entre plantas de 30cm.\\
+
+
+
+Técnicas.\\
+
  
+Las redes neuronales clasifican basado en sus neuronas entrenadas a través de datos conocidos con anterioridad, por lo que no es de importancia el hecho de que no exista una relación entre estas variables, ya que no requiere de supuestos estad\'isticos a tener en cuenta para su proceso de clasificación.\\
 
+
+El uso de redes neuronales probabil\'isticas es una soluci\'on que se plantea usar en la siguiente propuesta para el modelado de los datos recogidos y observados de la cosecha de un cultivo de tubérculos de papa criolla (\textit{S. phureja}) realizado en el Centro Agropecuario Marengo de la Universidad Nacional de Colombia, en el departamento de Cundinamarca en Colombia (74°12'58.51''W;4°40'52.92''N), el cual tiene una altitud de 2516 msnm y una temperatura media de 14 °C. Implementado como un paquete en Lenguaje R que permita a través de una entrada, propuesta como una matriz cargada con los datos observados de cultivo, clasificar los tub\'erculos de papa criolla cosechados en densidades de siembra seg\'un el peso total del cultivo, peso total de tub\'erculos y diam\'etro de cada tub\'erculo.\\
+
+Este anteproyecto de trabajo de grado está dividido en los siguientes capítulos:\\
+
+\textbf{Capítulo 1. Preliminares. }
+\begin{itemize}
+\item {Planteamiento del Problema; en él se plantean las razones en las cuales esta basado el proyecto de investigación.}
+\item {Objetivos, se expone el objetivo general del proyecto de investigación y se identifican los objetivos específicos mediante los cuales se lleva a cabo el desarrollo del proyecto.}
+\item {Justificación e importancia, se establecen los motivos por cuales el desarrollo del proyecto de investigación es relevante}
+\item {Alcance y limitaciones, se detalla la funcionalidad del proyecto de investigación.}
+\end{itemize}
+\textbf{Capítulo 2. Fundamentos teóricos}
+\begin{itemize}
+\item {Antecedentes, se exponen revisiones de investigaciones previas que posean relación directa con el tema del actual proyecto de investigación.}
+\item {Bases teóricas, se definen un conjunto de conceptos que proporcionan conocimiento acerca del objeto de estudio.}
+\end{itemize}
+\textbf{Capítulo 3.Fundamentos metodológicos}
+\begin{itemize}
+\item {Enfoque de la investigación, se plantea el enfoque utilizado para llevar a cabo la investigación.}
+\item {Tipo o nivel de investigación, se expone el tipo de investigación y nivel de investigación, según el grado de profundidad que abarca y la naturaleza de los datos.}
+\item {Diseño de la investigación, se establece la estrategia general que adopta el investigador para responder al problema planteado.}
+\item {Metodología, se describen el conjunto de técnicas, herramientas y pautas utilizadas para llevar a cabo el proyecto de investigación.}
+\end{itemize}
