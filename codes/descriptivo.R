@@ -4,7 +4,7 @@ library(psych);library(spdep)
 options(digits=5); #Cantidad de decimales a mostrar
 
 # Carga de Datos ----------------------------------------------------------
-completeData = data.frame(read_excel("~/Documents/Tesis/datagnel.xlsx", sheet = "DataJD")) #Carga de la data desde el archivo
+completeData = data.frame(read_excel("~/Documents/tesis_neuronal_network/datagnel.xlsx", sheet = "DataJD")) #Carga de la data desde el archivo
 pesoFrescoTotal = sum(completeData$PesoFresco) #Calculando el peso total del cultivo
 
 # Estadisticas Decriptivas ------------------------------------------------
@@ -14,7 +14,7 @@ estadisticasDescriptivas = describeBy(completeData,completeData$Densidad,digits 
 densidades <- unique(completeData$Densidad)
 dataXDensidad <- list()
 for (i in densidades){
-    dataXDensidad[[i]] <- completeData[completeData$Densidad==i, 3:5]
+    dataXDensidad[[i]] <- completeData[completeData$Densidad==i, 2:5]
 }
 
 # Correlacion entre variables ---------------------------------------------
@@ -166,7 +166,4 @@ for (i in densidades){
     sumaPesos <- apply(matrizParcialPesosXDensidad[[i]],1,sum)
     matrizPesosXDensidad[[i]] <- matrizParcialPesosXDensidad[[i]]/sumaPesos;
 }
-
-# Indices de Moran --------------------------------------------------------
-
 
