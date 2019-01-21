@@ -2,7 +2,7 @@
 
 **Tesis Investigativa** - *Clasificador de tubérculos de papa a traves de una red neuronal con entrada de datos procesados a traves de regresión espacial.*
 
-##Características...
+## Características...
 
 * Documento investigativo en LaTex. 
 * Documentos de antecedentes.
