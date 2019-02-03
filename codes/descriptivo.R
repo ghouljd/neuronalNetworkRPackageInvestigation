@@ -65,8 +65,8 @@ subplot(boxPFxDensidad, boxDMPxDensidad, boxCPxDensidad)
 #Por DMP
 listBubblePlots <- list()
 for (i in densidades){
-    listBubblePlots[[i]] <- plot_ly(completeData[completeData$Densidad==i,], 
-                                    x = ~PosX, y = ~PosY, text = ~Planta, 
+    listBubblePlots[[i]] <- plot_ly(completeData[completeData$Densidad==i,],
+                                    x = ~PosX, y = ~PosY, text = ~Planta,
                                     type = 'scatter', mode = 'markers',
                                     marker = list(size = ~DMP, opacity = 0.5),
                                     name = paste("Densidad", i)) %>%
@@ -79,8 +79,8 @@ subplot(listBubblePlots[[1]],listBubblePlots[[2]],listBubblePlots[[3]])
 #Por Cantidad de Papas
 listBubblePlots <- list()
 for (i in densidades){
-    listBubblePlots[[i]] <- plot_ly(completeData[completeData$Densidad==i,], 
-                                    x = ~PosX, y = ~PosY, text = ~Planta, 
+    listBubblePlots[[i]] <- plot_ly(completeData[completeData$Densidad==i,],
+                                    x = ~PosX, y = ~PosY, text = ~Planta,
                                     type = 'scatter', mode = 'markers',
                                     marker = list(size = ~CantPapas, opacity = 0.5),
                                     name = paste("Densidad", i)) %>%
@@ -93,8 +93,8 @@ subplot(listBubblePlots[[1]],listBubblePlots[[2]],listBubblePlots[[3]])
 #Por Peso Fresco
 listBubblePlots <- list();
 for (i in densidades){
-    listBubblePlots[[i]] <- plot_ly(completeData[completeData$Densidad==i,], 
-                                    x = ~PosX, y = ~PosY, text = ~Planta, 
+    listBubblePlots[[i]] <- plot_ly(completeData[completeData$Densidad==i,],
+                                    x = ~PosX, y = ~PosY, text = ~Planta,
                                     type = 'scatter', mode = 'markers',
                                     marker = list(size = ~PesoFresco, opacity = 0.5),
                                     name = paste("Densidad", i)) %>%
@@ -134,7 +134,7 @@ subplot(barCantPapasXDensidad, barDMPXDensidad, barPesoFrescoXDensidad)
 #Calculando distancia maxima por densidad con pitagoras
 distanciasXDensidad <- c(30,40,50)
 distanciaEntreSurcos <- 100
-distMaxEntreVecinosXDens <- rapply(lapply(as.list(distanciasXDensidad), 
+distMaxEntreVecinosXDens <- rapply(lapply(as.list(distanciasXDensidad),
                                           function(element) sqrt(element^2 + distanciaEntreSurcos^2)),c)
 
 #Matriz de vecinos por densidad
@@ -166,4 +166,3 @@ for (i in densidades){
     sumaPesos <- apply(matrizParcialPesosXDensidad[[i]],1,sum)
     matrizPesosXDensidad[[i]] <- matrizParcialPesosXDensidad[[i]]/sumaPesos;
 }
-

@@ -5,7 +5,7 @@
 #' @param indiceCategoria Indice de la columna que categorizan los datos (No requerido, Por defecto: 1)
 #' @return Lista con los datos de la red neuronal probabilística entrenada.
 #' @export
-# Entrenarla red neuronal probabilística.
+# Entrenar la red neuronal probabilística.
 
 normalizar <- function(valor) {
   return ((valor - min(valor)) / (max(valor) - min(valor)))
@@ -25,6 +25,5 @@ entrenar <- function(data,
   )
   redNeuronal$setNormalizado <- redNeuronal$originalSet %>%
                                   (function(x) lapply(x, normalizar))
-
   return(redNeuronal)
 }
