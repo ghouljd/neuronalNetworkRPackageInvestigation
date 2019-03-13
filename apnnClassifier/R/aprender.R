@@ -39,7 +39,3 @@ aprender <- function(red){
 pensar <- function(entradas, pesos){
   sigmoide(entradas*pesos)
 }
-
-feedforward <- function(a){
-
-}
