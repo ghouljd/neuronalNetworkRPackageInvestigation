@@ -11,7 +11,7 @@ normalizar <- function(valor) {
   return ((valor - min(valor)) / (max(valor) - min(valor)))
 }
 
-entrenar <- function(data,
+inputDefine <- function(data,
                      nombre = "Red neuronal probabilística",
                      indiceCategoria = 1){
   if(missing(data)) stop("El parámetro 'data' es requerido.")
