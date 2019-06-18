@@ -2,8 +2,20 @@ normalizar <- function(set) {
   return ((set - min(set)) / (max(set) - min(set)))
 }
 
-sigmoide <- function(z) {
-  return(1.0/(1.0+exp(-z)))
+sigmoide <- function(w, X, b) {
+  resultado = 1
+  for (columna in 1:length(X)) {
+    resultado = resultado * 1.0/(1.0+exp(-(w * X[columna] + b)))
+  }
+  return(resultado)
+}
+
+derivada_sigmoide <- function(X, valor) {
+  resultado = 1
+  for (columna in 1:length(X)) {
+    resultado = resultado * X[columna] * valor
+  }
+  return(resultado)
 }
 
 inicializar <- function(dim) {

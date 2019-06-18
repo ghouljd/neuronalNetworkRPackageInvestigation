@@ -19,7 +19,7 @@ optimizar <- function(w, b, X, Y, iteraciones, taza_aprendizaje) {
 
     costo[i] = prop$costo
 
-    print(paste('Costo despues de la iteracion ',i, ': ',costo[i]))
+    #print(paste('Costo despues de la iteracion ',i, ': ',costo[i]))
   }
 
   resultado <- list(

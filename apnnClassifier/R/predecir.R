@@ -7,6 +7,6 @@
 # Se encarga de ejecutar la prediccion de la red neuronal probabilística.
 
 predecir <- function(w,b,X) {
-  aprox <- sigmoide(w * X + b)
+  aprox <- sigmoide(w, X, b)
   return(round(aprox))
 }
