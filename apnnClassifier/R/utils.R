@@ -10,17 +10,11 @@ sigmoide <- function(w, X, b) {
   return(resultado)
 }
 
-derivada_sigmoide <- function(X, valor) {
-  resultado = 1
-  for (columna in 1:length(X)) {
-    resultado = resultado * X[columna] * valor
-  }
-  return(resultado)
-}
-
-inicializar <- function(dim) {
+inicializar <- function(set) {
+  dim = length(set)
+  tam = length(set[,1])
   init <- list(
-    w=integer(dim),
+    w=matrix(0, tam, dim),
     b=0
   )
   return(init)

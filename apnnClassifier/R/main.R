@@ -10,7 +10,7 @@
 # Se encarga de correr todas la funciones que permiten clasificacion a traves red neuronal probabilística.
 
 main <- function (X_entranamiento,Y_entranamiento,X_pruebas,Y_pruebas,iteraciones = 2000,taza_aprendizaje = 0.005){
-  ini = inicializar(length(X_entranamiento[,1]))
+  ini = inicializar(X_entranamiento)
 
   # Agregar una funcion para validaciones como que el tama.o de los sets sean el mismo,
   # Que realmente sean parametros

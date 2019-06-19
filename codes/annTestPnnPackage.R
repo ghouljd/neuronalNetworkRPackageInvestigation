@@ -32,3 +32,4 @@ y_testSet<-replace(y_testSet, y_testSet==2 | y_testSet==1, 0)
 y_testSet<-replace(y_testSet, y_testSet==3, 1)
 
 main(x_trainSet,y_trainSet,x_testSet,y_testSet, 5)
+warnings()

@@ -14,12 +14,14 @@ optimizar <- function(w, b, X, Y, iteraciones, taza_aprendizaje) {
   for (i in 1:iteraciones) {
     prop = propagar(w, b, X, Y)
 
-    w = w - taza_aprendizaje * prop$dw
+    for (columna in 1:length(X)) {
+      w[columna] = w[columna] - taza_aprendizaje * prop$dw[[columna]]
+    }
     b = b - taza_aprendizaje * prop$db
 
     costo[i] = prop$costo
 
-    #print(paste('Costo despues de la iteracion ',i, ': ',costo[i]))
+    print(paste('Costo despues de la iteracion ',i, ': ',sum(costo[[i]])))
   }
 
   resultado <- list(

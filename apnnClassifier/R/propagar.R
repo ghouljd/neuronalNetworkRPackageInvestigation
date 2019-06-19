@@ -9,15 +9,17 @@
 
 propagar <- function(w, b, X, Y) {
   tam = length(X[,1])
-
+  dw = 0
   # Propagacion hacia adelante
   aprox = sigmoide(w, X, b)
   costo = (-1/tam) * ((Y * log(aprox) + aprox + (1-Y))) * log(1-aprox)
 
   # Propagacion hacia atras
-  dw = (1/tam) * (derivada_sigmoide(X, aprox - Y))
+  for (columna in 1:length(X)) {
+    dw[columna] = (1/tam) * (X[columna] * aprox - Y)
+  }
   db = (1/tam) * sum(aprox - Y)
-  print(dw)
+
   resultado <- list(
     "dw" = dw,
     "db" = db,
@@ -25,3 +27,4 @@ propagar <- function(w, b, X, Y) {
   )
   return(resultado)
 }
+
