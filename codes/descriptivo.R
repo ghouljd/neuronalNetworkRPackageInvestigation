@@ -5,6 +5,7 @@ options(digits=5); #Cantidad de decimales a mostrar
 
 # Carga de Datos ----------------------------------------------------------
 completeData = data.frame(read_excel("~/Documents/neuronalNetworkRPackageInvestigation/datagnel.xlsx", sheet = "DataJD")) #Carga de la data desde el archivo
+
 pesoFrescoTotal = sum(completeData$PesoFresco) #Calculando el peso total del cultivo
 
 # Estadisticas Decriptivas ------------------------------------------------
