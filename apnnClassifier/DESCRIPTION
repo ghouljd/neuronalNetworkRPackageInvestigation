@@ -1,11 +1,14 @@
 Package: apnnClassifier
 Type: Package
-Title: Clasificador de tuberculos de plantas para densidades de siembra.
+Title: Clasificador multiclase basado en redes neuronales.
 Version: 0.1.0
 Author: Jesús Escalante <jesusd.escalante@unet.edu.ve>
 Maintainer: Jesús Escalante <jesusd.escalante@unet.edu.ve>, Rossana Timaure <rttg@unet.edu.ve>
-Description: Clasificador de tuberculos de plantas para diferentes densidades de siembra 
-    empleando redes neuronales probabilisticas.
+Description: Clasificador empleando redes neuronales probabilisticas.
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
+Imports: 
+  pnn,
+  dplyr,
+  pROC

@@ -1,1 +1,3 @@
-exportPattern("^[[:alpha:]]+")
+export(trainNeuralNet)
+export(evaluate)
+export(standardize)
