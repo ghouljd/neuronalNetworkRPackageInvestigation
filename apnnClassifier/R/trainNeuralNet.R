@@ -1,8 +1,22 @@
-#' Prediccion de la Red Neuronal
+#' Training of pnn package neural net for classification
 #'
-#' @param w Matriz de pesos. (Requerido)
-#' @param b Valor del sesgo. (Requerido)
-#' @param X Set de datos de entrada (Requerido)
+#' @param train_set Matriz de pesos. (Requerido)
+#' @param test_set Valor del sesgo. (Requerido)
+#' @param category_column Set de datos de entrada (Requerido)
+#' @param sigma Set de datos de entrada (Requerido)
+#'
+#' @return pnn \code{list} of the guessed category and the probabilities of each category.
+#'
+#' @examples
+#' library(pnn)
+#' data(norms)
+#' pnn <- learn(norms)
+#' pnn <- smooth(pnn, sigma=0.8)
+#' guess(pnn, c(1,1))
+#' guess(pnn, c(1,1))$category
+#' guess(pnn, c(1,1))$probabilities
+#' guess(pnn, c(2,1))
+#' guess(pnn, c(1.5,1))
 #' @export
 # Se encarga de ejecutar la prediccion de la red neuronal probabilística.
 
