@@ -15,5 +15,5 @@ test_set <- data.matrix(testData[-train_ind, 2:3])
 
 data(trainData, testData)
 pnn <- trainNeuralNet(train_set = trainData, test_set = testData, sigma = -77)
-View(pnn)
 pnn <- evaluate(pnn)
+View(pnn)
