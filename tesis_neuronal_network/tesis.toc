@@ -1,0 +1,33 @@
+\babel@toc {spanish}{}
+\contentsline {chapter}{\numberline {1}Preliminares}{4}{chapter.1}
+\contentsline {section}{\numberline {1.1}Planteamiento y formulaci\IeC {\'o}n del problema}{4}{section.1.1}
+\contentsline {section}{\numberline {1.2}Objetivos}{8}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Objetivo general}{8}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Objetivos espec\'ificos}{8}{subsection.1.2.2}
+\contentsline {section}{\numberline {1.3}Justificaci\IeC {\'o}n e importancia}{8}{section.1.3}
+\contentsline {section}{\numberline {1.4}Alcance y limitaciones}{10}{section.1.4}
+\contentsline {chapter}{\numberline {2}Fundamentos te\'oricos}{11}{chapter.2}
+\contentsline {section}{\numberline {2.1}Antecedentes}{11}{section.2.1}
+\contentsline {section}{\numberline {2.2}Bases Te\'oricas}{12}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Papa criolla (\textit {Solanum Phureja}).}{12}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Redes neuronales artificiales.}{12}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Curvas ROC.}{15}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Lenguaje R.}{15}{subsection.2.2.4}
+\contentsline {subsection}{\numberline {2.2.5}Estructura de paquetes en R/RStudio.}{15}{subsection.2.2.5}
+\contentsline {subsection}{\numberline {2.2.6}RStudio.}{20}{subsection.2.2.6}
+\contentsline {chapter}{\numberline {3}Fundamentos metodol\'ogicos}{21}{chapter.3}
+\contentsline {section}{\numberline {3.1}Enfoque de la investigaci\'on}{21}{section.3.1}
+\contentsline {section}{\numberline {3.2}Dise\~no de la investigaci\'on}{21}{section.3.2}
+\contentsline {section}{\numberline {3.3}Fases metodol\IeC {\'o}gicas}{22}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Desarrollo del paquete en R}{22}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Comparaci\IeC {\'o}n de resultados.}{24}{subsection.3.3.2}
+\contentsline {chapter}{\numberline {4}Desarrollo}{25}{chapter.4}
+\contentsline {section}{\numberline {4.1}Creaci\IeC {\'o}n del esqueleto del paquete.}{25}{section.4.1}
+\contentsline {section}{\numberline {4.2}Dise\IeC {\~n}o de las soluciones algor\IeC {\'\i }tmicas para el entrenamiento de una red neuronal probabil\IeC {\'\i }stica que permita la clasificaci\IeC {\'o}n de tub\IeC {\'e}rculos de papa.}{26}{section.4.2}
+\contentsline {section}{\numberline {4.3}Dise\IeC {\~n}o del algoritmo de la funci\IeC {\'o}n de entrenamiento y clasificaci\IeC {\'o}n de la red (trainNeuralNet).}{27}{section.4.3}
+\contentsline {section}{\numberline {4.4}Dise\IeC {\~n}o del algoritmo de la funci\IeC {\'o}n de evaluaci\IeC {\'o}n de la red neuronal probabil\IeC {\'\i }stica y su clasificaci\IeC {\'o}n (evaluate).}{27}{section.4.4}
+\contentsline {section}{\numberline {4.5}Dise\IeC {\~n}o del algoritmo de la funci\IeC {\'o}n de estandarizaci\IeC {\'o}n de datos (standardize).}{29}{section.4.5}
+\contentsline {section}{\numberline {4.6}Codificaci\IeC {\'o}n de los algoritmos}{30}{section.4.6}
+\contentsline {section}{\numberline {4.7}Chequeo del paquete, m\IeC {\'e}todo de distribuci\IeC {\'o}n y registro del m\IeC {\'e}todo de env\IeC {\'\i }o.}{31}{section.4.7}
+\contentsline {section}{\numberline {4.8}Pruebas funcionales del paquete}{32}{section.4.8}
+\contentsline {chapter}{\numberline {5}Conclusiones y recomendaciones}{37}{chapter.5}

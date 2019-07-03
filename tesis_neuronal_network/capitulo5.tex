@@ -1,0 +1,14 @@
+\chapter{Conclusiones y recomendaciones}
+
+	Se diseñaron las soluciones algorítmicas para el entrenamiento de redes neuronales probabilísticas, lográndose ajustar a cualquier tipo de clasificación sin sesgar los algoritmos al objetivo general que es la clasificación de tubérculos de papas, esto con el fin de que el paquete pueda ser usado independiente del tipo de datos que se tengan para clasificar. Se observó que el algoritmo funciona de manera mucho más rápida cuando se conoce o se prueban manualmente valores para el punto óptimo de la función de activación, ya que como cualquier clasificador, para un set de datos grande los tiempos calculando este punto podrían elevarse considerablemente.\\
+
+Se codificaron tres funciones que permiten resolver los algoritmos y la problemática planteada. Estas funciones son parametrizables, permitiendo el entrenamiento de redes neuronales probabilísticas para clasificar cualquier tipo de datos y en tantas clases como se requiera en otras investigaciones independientemente de su complejidad o cantidad de datos. \\
+
+Se realizaron pruebas del paquete comenzando por clasificaciones sencillas con dos entradas y dos clases hasta una cantidad de cinco entradas y tres clases. Determinando así que se realizó un buen clasificador con buenos resultados, pues se evidencian buenas áreas bajo la curva en los gráficos de curvas características. \\
+
+Con respecto al análisis realizado con el paquete en la clasificación realizada para los datos de tubérculos de papa realizado por Bernal, 2017, no se obtuvo una buena clasificación, debido a dos razones, los datos fueron tomados mediante conteos afectando la clasificación bajo los supuestos de muestreo, además se puede concluir que aunque exista correlación entre las variables que fueron usadas como entrada al algoritmo (peso fresco, diámetro medio ponderado y cantidad de papas) no son buenos clasificadores para la densidad de siembra. Se recomienda trabajar los datos de entrada estadísticamente, eliminando datos atípicos y probar otros sistemas de muestreo en la recolección de datos con el fin de obtener mejores clasificaciones.\\
+
+Con respecto al desarrollo de software, bajo el paradigma del desarrollo de paquetes en lenguaje R, apnnClassifier es fácilmente escalable, dado que la red neuronal probabilística puede ser parametrizable, debido a que es de código abierto, puede anexarse en nuevas versiones a la
+librería de funciones del paquete.\\
+
+Como recomendación, se puede evaluar el desarrollo de un ambiente para gráficos más interactivo con el usuario o en plataforma WEB, elementos que se encontraban fuera del alcance de este proyecto de investigación.\\

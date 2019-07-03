@@ -1,4 +1,0 @@
-export(guess)
-export(learn)
-export(perf)
-export(smooth)

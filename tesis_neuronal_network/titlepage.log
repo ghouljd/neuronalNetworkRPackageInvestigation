@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.2.1)  30 JUN 2018 22:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.5.30)  1 JUL 2019 18:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **titlepage.tex
 (./titlepage.tex
-LaTeX2e <2016/02/01>
-Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
+LaTeX2e <2017-04-15>
+Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 
 ! LaTeX Error: Environment titlepage undefined.
 
@@ -537,7 +537,7 @@ Missing character: There is no v in font nullfont!
 Missing character: There is no e in font nullfont!
 ! Undefined control sequence.
 l.58   \TitleBlock
-                  {\small San Crist\'obal, Julio de 2018.\insertsubmitdate}
+                  {\small San Crist\'obal, Julio.\insertsubmitdate}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -546,7 +546,7 @@ and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
 l.58   \TitleBlock{\small
-                          San Crist\'obal, Julio de 2018.\insertsubmitdate}
+                          San Crist\'obal, Julio.\insertsubmitdate}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -570,15 +570,9 @@ Missing character: There is no u in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no o in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 8 in font nullfont!
 Missing character: There is no . in font nullfont!
 ! Undefined control sequence.
-l.58 ...ist\'obal, Julio de 2018.\insertsubmitdate
+l.58 ...l San Crist\'obal, Julio.\insertsubmitdate
                                                   }
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -612,11 +606,11 @@ or  <return>  to continue without it.
 
  
 Here is how much of TeX's memory you used:
- 18 strings out of 493029
- 247 string characters out of 6136235
- 53063 words of memory out of 5000000
- 3652 multiletter control sequences out of 15000+600000
+ 18 strings out of 492982
+ 247 string characters out of 6134896
+ 53914 words of memory out of 5000000
+ 3682 multiletter control sequences out of 15000+600000
  3941 words of font info for 15 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 16i,1n,16p,113b,105s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 16i,1n,16p,109b,105s stack positions out of 5000i,500n,10000p,200000b,80000s
 !  ==> Fatal error occurred, no output PDF file produced!

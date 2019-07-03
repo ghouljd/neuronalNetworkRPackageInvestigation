@@ -1,12 +1,11 @@
-\chapter{Fundamentos Metodol\'ogicos}
+\chapter{Fundamentos metodol\'ogicos}
 
-	A continuaci\'on se plantea la estructura a seguir por el presente trabajo, detallando el enfoque, tipo, nivel y dise\~no de la investigaci\'on y la metodolog\'ia a implementar entre otros.
+	A continuaci\'on se plantea la estructura a seguir por el presente trabajo, detallando el enfoque, tipo, nivel y dise\~no de la investigaci\'on y la metodolog\'ia a implementar, entre otros.
 	
 \section{Enfoque de la investigaci\'on}
 	
-	En función de los objetivos planteados en la presente investigación, la misma se adecua a los parámetros de una investigación de tipo proyectivo. La Universidad Pedagógica Experimental Libertador UPEL (2006) expone que la investigación proyectiva consiste en encontrar la solución a los problemas prácticos, se ocupa de cómo deberían ser las cosas para alcanzar los fines y funcionar adecuadamente. Consiste en la elaboración de una propuesta o de un modelo, para solucionar problemas o necesidades de tipo práctico, ya sea de un grupo social, institución, un área en particular del conocimiento, partiendo de un diagnóstico preciso de las necesidades del momento, los procesos explicativos o generadores involucrados y las tendencias futuras.\\
+	En función de los objetivos planteados en la presente investigación, la misma se adecua a los parámetros de una investigación de tipo proyectivo. La Universidad Pedagógica Experimental Libertador UPEL (2006) expone que la investigación proyectiva consiste en encontrar la solución a los problemas prácticos, se ocupa de cómo deberían ser las cosas para alcanzar los fines y funcionar adecuadamente. Consiste en la elaboración de una propuesta o de un modelo, para solucionar problemas o necesidades de tipo práctico, ya sea de un grupo social, institución, o un área en particular del conocimiento, partiendo de un diagnóstico preciso de las necesidades del momento, los procesos explicativos o generadores involucrados y las tendencias futuras.\\
 	
-
 	
 \section{Dise\~no de la investigaci\'on}
 	
@@ -45,7 +44,7 @@ En esta etapa se definirán las variables de entrada y se declararan las neurona
 \noindent
 \textbf{Pruebas unitarias de las funciones.}\\
 
-Debido a que los paquetes en R están conformados, entre otros elementos por las funciones primarias, a cada una de ellas se les realizaran pruebas unitarias en dos fases, la primera con datos sintéticos que permitan comprobar cada estado del diagrama de flujo, que esquematiza la solución numérica y/o lógica que permite la construcción de a PNN y su entrenamiento. Entre las herramientas ha utilizarse se encuentran los paquetes de R\emph{RUnit} (Zenka, 2015) y \emph{testthat} (Wickham, 2017), y la segunda etapa donde se realizaran las pruebas funcionales del paquete con el conjunto de datos de prueba que formaran parte integral del paquete y con los cuales se desarrollaran los ejemplos prácticos que conformaran la documentación que acompaña al paquete R.\\
+Debido a que los paquetes en R están conformados, entre otros elementos por las funciones primarias, a cada una de ellas se les realizaran pruebas unitarias en dos fases, la primera con datos sintéticos que permitan comprobar cada estado del diagrama de flujo, que esquematiza la solución numérica y/o lógica que permite la construcción de la PNN y su entrenamiento. Entre las herramientas ha utilizarse se encuentran los paquetes de R \emph{RUnit} (Zenka, 2015) y \emph{testthat} (Wickham, 2017), y la segunda etapa donde se realizaran las pruebas funcionales del paquete con el conjunto de datos de prueba que formaran parte integral del paquete y con los cuales se desarrollaran los ejemplos prácticos que conformaran la documentación que acompaña al paquete R.\\
 
 \noindent
 \textbf{Implementar y realizar pruebas de clasificación.}\\
@@ -68,51 +67,3 @@ Se seleccionara la forma de distribución del paquete desde el repositorio local
 \subsection{Comparación de resultados.}
 
 En este paso se procederá a la construcción de las curvas ROC asociadas a los casos de prueba planteados para el paquete desarrollado, permitiendo concluir de forma descriptiva  sobre  relaciones entre variables, el mejor manejo de los datos.\\
-
-
-\section{Aspectos administrativos}
-
-\vspace{1 cm}
-La realización de la investigación será planificada según lo establecido en el siguente diagrama:\\
-
-\begin{figure}[!ht]
-\begin{center}
-
-\begin{ganttchart}[y unit title=0.4cm,
-y unit chart=0.5cm,
-vgrid,hgrid,
-title height=1,
-bar/.style={draw,fill=cyan},
-bar incomplete/.append style={fill=yellow!50},
-bar height=0.7]{1}{16}
- \gantttitle{Semanas}{16}\\
- \gantttitle{Julio}{2}
- \gantttitle{Agosto}{4} 
- \gantttitle{Septiembre}{4}
- \gantttitle{Octubre}{5}\\
- \gantttitle{Noviembre}{1}\\
- \gantttitlelist{1,...,2}{1}
- \gantttitlelist{1,...,4}{1}
- \gantttitlelist{1,...,4}{1} 
- \gantttitlelist{1,...,5}{1} 
- \gantttitlelist{1,...,1}{1}\\
- \ganttbar{\tiny{Determinación de los lineamientos para el diseño del paquete}}{1}{1} \\
- \ganttbar{\tiny{Creación del esqueleto del paquete}}{2}{2} \\
- \ganttbar{\tiny{Dise\~no de los algoritmos para la biblioteca de funciones}}{2}{3} \\
- \ganttbar{\tiny{Codificación de la biblioteca de funciones}}{3}{9} \\
- \ganttbar{\tiny{Explorar y manipular la data}}{3}{4} \\
- \ganttbar{\tiny{Diseñar y entrenar la red neuronal probabilística}}{5}{8} \\
- \ganttbar{\tiny{Implementar y realizar pruebas de clasificación.}}{8}{12} \\
- \ganttbar{\tiny{Comparación de resultados}}{12}{14} \\
- \ganttbar{\tiny{Graficar y documentar resultados}}{15}{16} \\
- \ganttbar{\tiny{Prueba de la biblioteca de funciones}}{9}{12} \\
- \ganttbar{\tiny{Documentación del paquete}}{4}{12} \\
- \ganttbar{\tiny{Chequeo del paquete}}{10}{14} \\
- \ganttbar{\tiny{Creación del método de distribución del paquete}}{14}{15} \\
- \ganttbar{\tiny{Pruebas de distribución del paquete}}{15}{16} \\
- \ganttbar{\tiny{Realización del informe del proyecto especial de grado}}{2}{16} \\
-\end{ganttchart}
-
-\end{center}
-\caption{Diagrama de Gantt con la planificación del proyecto especial de grado}
-\end{figure}
