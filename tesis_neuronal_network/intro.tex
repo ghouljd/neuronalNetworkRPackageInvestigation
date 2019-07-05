@@ -3,24 +3,19 @@
 \chapter*{Introducci\'on}
 \pagenumbering{arabic} % para empezar la numeración con números
 
-En los cultivos de papa criolla (\textit{Solanum phureja}) son muchas las variables que influyen en la cosecha de tub\'erculos, tales como la temperatura, altura del terreno, clima, tipo y composici\'on del suelo, densidad de siembra, entre otros. Los encargados y personas interesadas en este proceso siempre han buscado manipularlas,  no sólo para mejorar la calidad del producto, si no para obtener caracter\'isticas que sean convenientes, como el tama\~no de los tub\'erculos, ya que existen intereses industriales diferentes para su comercializaci\'on.\\
+En los cultivos de papa criolla (\textit{Solanum phureja}) son muchas las variables que influyen en la cosecha de los tub\'erculos, tales como la temperatura, la altura del terreno, el clima, el tipo y la composici\'on del suelo, la densidad de siembra, entre otros. Los encargados y personas interesadas en este proceso siempre han buscado manipularlas,  no sólo para mejorar la calidad del producto, si no para obtener caracter\'isticas que sean convenientes, como el tama\~no de los tub\'erculos, ya que existen intereses industriales diferentes para su comercializaci\'on.\\
 
-Investigaciones anteriores concluyeron que la densidad de siembra es una variable con una afectaci\'on considerable en el tama\~no de los tub\'erculos producidos por las plantas en su ciclo de cosecha, sin embargo la manipulación de esta variable generalmente se maneja de forma lineal sin tener en cuenta ciertas condiciones espaciales que posee como propiedades, por  ser distancias entre calles y surcos, y distancia entre plantas a la que se siembra, o expresado de otra manera cuantas plantas son sembradas por metro cuadrado en un terreno.\\
+Investigaciones anteriores concluyeron que la densidad de siembra es una variable con una afectaci\'on considerable en el tama\~no de los tub\'erculos producidos por las plantas en su ciclo de cosecha, sin embargo la manipulación de esta variable generalmente se maneja de forma lineal sin tener en cuenta ciertas condiciones espaciales que posee como propiedades, por ser distancias entre las calles y los surcos, y la distancia entre plantas a la que se siembra, o expresado de otra manera cuantas plantas son sembradas por metro cuadrado en un terreno.\\
 
-La densidad de siembra es una variable cualitativa que aunque se trata de distancias se definen en densidades predeterminadas como d$_1$ = 50x30cm, donde d$_1$ es una densidad definida igual a un espacio entre surcos de 50cm y distancia entre plantas de 30cm.\\
+La densidad de siembra es una variable cualitativa, que aunque se trata de distancias, se definen en densidades predeterminadas como d$_1$ = 50x30cm, donde d$_1$ es una densidad definida igual a un espacio entre  surcos de 50cm y distancia entre plantas de 30cm.\\
 
+Por otra parte, las redes neuronales clasifican basado en sus neuronas entrenadas, a través de datos conocidos con anterioridad, y no requiere de supuestos estad\'isticos a tener en cuenta para su proceso de clasificación.\\
 
+El uso de redes neuronales probabil\'isticas es una soluci\'on que se planteó para el modelado de los datos recogidos y observados de la cosecha de un cultivo de tubérculos de papa criolla (\textit{Solanum phureja}) realizado en el Centro Agropecuario Marengo de la Universidad Nacional de Colombia, en el departamento de Cundinamarca en Colombia (74°12'58.51''W;4°40'52.92''N), el cual tiene una altitud de 2516 msnm y una temperatura media de 14 °C. Implementado un paquete en Lenguaje R que permite a través de una entrada, propuesta como una matriz  con los datos observados de cultivo, clasificar los tub\'erculos de papa criolla cosechados en densidades de siembra seg\'un el peso total del cultivo, peso total de tub\'erculos y diam\'etro de cada tub\'erculo.\\
 
-Técnicas.\\
+Este  trabajo de grado está dividido en los siguientes capítulos:\\
 
- 
-Las redes neuronales clasifican basado en sus neuronas entrenadas a través de datos conocidos con anterioridad, por lo que no es de importancia el hecho de que no exista una relación entre estas variables, ya que no requiere de supuestos estad\'isticos a tener en cuenta para su proceso de clasificación.\\
-
-
-El uso de redes neuronales probabil\'isticas es una soluci\'on que se plantea usar en la siguiente propuesta para el modelado de los datos recogidos y observados de la cosecha de un cultivo de tubérculos de papa criolla (\textit{S. phureja}) realizado en el Centro Agropecuario Marengo de la Universidad Nacional de Colombia, en el departamento de Cundinamarca en Colombia (74°12'58.51''W;4°40'52.92''N), el cual tiene una altitud de 2516 msnm y una temperatura media de 14 °C. Implementado como un paquete en Lenguaje R que permita a través de una entrada, propuesta como una matriz cargada con los datos observados de cultivo, clasificar los tub\'erculos de papa criolla cosechados en densidades de siembra seg\'un el peso total del cultivo, peso total de tub\'erculos y diam\'etro de cada tub\'erculo.\\
-
-Este anteproyecto de trabajo de grado está dividido en los siguientes capítulos:\\
-
+\noindent
 \textbf{Capítulo 1. Preliminares. }
 \begin{itemize}
 \item {Planteamiento del problema; en él se plantean las razones en las cuales esta basado el proyecto de investigación.}
@@ -33,10 +28,23 @@ Este anteproyecto de trabajo de grado está dividido en los siguientes capítulo
 \item {Antecedentes, se exponen revisiones de investigaciones previas que posean relación directa con el tema del actual proyecto de investigación.}
 \item {Bases teóricas, se definen un conjunto de conceptos que proporcionan conocimiento acerca del objeto de estudio.}
 \end{itemize}
-\textbf{Capítulo 3.Fundamentos metodológicos}
+\textbf{Capítulo 3. Fundamentos metodológicos}
 \begin{itemize}
 \item {Enfoque de la investigación, se plantea el enfoque utilizado para llevar a cabo la investigación.}
 \item {Tipo o nivel de investigación, se expone el tipo de investigación y nivel de investigación, según el grado de profundidad que abarca y la naturaleza de los datos.}
 \item {Diseño de la investigación, se establece la estrategia general que adopta el investigador para responder al problema planteado.}
 \item {Metodología, se describen el conjunto de técnicas, herramientas y pautas utilizadas para llevar a cabo el proyecto de investigación.}
+\end{itemize}
+\textbf{Capítulo 4. Desarrollo}
+\begin{itemize}
+\item{Creación del esqueleto del paquete, se detallan la creación de la estructura del paquete y su documentación.}
+\item{Diseño de las soluciones algorítmicas, se plantean los algoritmos que permiten dar solución a la clasificación a través de redes neuronales probabilísticas.}
+\item{Codificación de los algoritmos, se da a conocer la manera en que se desarrollaron en lenguaje R los algoritmos planteados para las soluciones de clasificación.}
+\item{Chequeo del paquete, método de distribución y registro del método de envío, se explica cómo se distribuye el paquete a repositorios públicos, para permitir su uso.}
+\item{Pruebas funcionales del paquete, se observa la funcionalidad del proyecto de investigación, mediante
+la exposición de tablas comparativas}
+\end{itemize}
+\textbf{Capítulo 5. Conclusiones}
+\begin{itemize}
+\item{Se da a conocer la evaluación e interpretación final de la investigación.}
 \end{itemize}

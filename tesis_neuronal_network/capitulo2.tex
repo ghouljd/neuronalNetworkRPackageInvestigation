@@ -2,12 +2,11 @@
 
 \section{Antecedentes}
 
-En el año 2011, Mayabiro E. presento en la Universidad Nacional Experimental del Táchira, un prototipo sobre el entorno MATLAB para el cálculo de la tasa de germinación de plántulas de pimentón previamente segmentadas. El entorno desarrollado permitió establecer una clasificación de las plántulas, hojas u objetos de la misma por medio de redes neuronales. Se realizo el entrenamiento de múltiples redes neuronales multicapas con algoritmos de retropropagación, donde aunque variaban las capas intermedias de las redes y sus funciones de transferencia fueron entrenadas con los mismos  datos de entrada, validandolas con una base de datos de pruebas para seleccionar al final una con salidas similares a las deseadas.\\
+La clasificación por medio de redes neuronales ha sido un hito ya marcado en el campo agronómico, muchos estudios se han realizado con el objetivo de analizar ciertos comportamientos de plantas y los beneficios que se puedan sacar de ellas. En el año 2011, Mayabiro E. presento en la Universidad Nacional Experimental del Táchira, un prototipo sobre el entorno \textit{MATLAB} para el cálculo de la tasa de germinación de plántulas de pimentón previamente segmentadas. El entorno desarrollado permitió establecer una clasificación de las plántulas, hojas u objetos de la misma por medio de redes neuronales. La investigadora realizó el entrenamiento de múltiples redes neuronales multicapas con algoritmos de retropropagación, donde aunque variaban las capas intermedias de las redes y sus funciones de transferencia fueron entrenadas con los mismos  datos de entrada, validandolas con una base de datos de pruebas para seleccionar al final una con salidas similares a las deseadas.\\
 
-La clasificación por medio de redes neuronales ha sido un hito ya marcado en el campo agronómico, muchos estudios se han realizado con el objetivo de analizar ciertos comportamientos de plantas y los beneficios que se puedan sacar de ellas. En el año 2011, el grupo de investigación de sistemas de procesamiento y control de señales de la Universidad Nacional Tenaga de Malasia desarrollo un sistema de inteligencia con un enfoque novedoso para la clasificación de frutas usando técnicas de procesamiento de imágenes digitales y redes neuronales artificiales, con el objetivo de desarrollar un método de clasificación rápido con una meta del 100\% de eficiencia. El estudio se realizo con cinco frutas, manzanas, platanos, zanahorias, mangos y naranjas, extrayendo de ellas siete características en función de la forma y el color. La captura de las imágenes se realizo con una cámara digital convencional y las manipulaciones a los datos y construcción de la red con el software MATLAB. Los resultados obtenidos durante esta investigación fueron de gran avance en el campo de reconocimiento de patrones en imágenes.\\
+En el año 2011, el grupo de investigación de sistemas de procesamiento y control de señales de la Universidad Nacional Tenaga de Malasia desarrollo un sistema de inteligencia con un enfoque novedoso para la clasificación de frutas usando técnicas de procesamiento de imágenes digitales y redes neuronales artificiales, con el objetivo de desarrollar un método de clasificación rápido con una meta del 100\% de eficiencia. El estudio se realizo con cinco especies de frutas, manzanas, platanos, zanahorias, mangos y naranjas, extrayendo de ellas siete características en función de la forma y el color. La captura de las imágenes se realizo con una cámara digital convencional y las manipulaciones a los datos y construcción de la red con el software \textit{MATLAB}. Los resultados obtenidos durante esta investigación fueron de gran avance en el campo de reconocimiento de patrones en imágenes.\\
 
-
-Otro estudio realizado en el año 2013 por Stephen Gang Wu consistía en el estudio teórico de técnicas de procesamiento de imágenes y datos para el reconocimiento automático de hojas para la clasificación de plantas. Doce características de las plantas fueron extraídas y distribuidas en cinco variables principales que constituían el vector de entrada de una red neuronal artificial probabilista, que había sido entrenada con 1800 hojas para clasificar 32 tipos de plantas con una precision superior al 90\%, el autor asegura que su metodología de implementación de la PNN era fácil y rápida en comparación de otras investigaciones similares.\\
+Otro estudio, realizado en el año 2013,  por Stephen Gang Wu consistía en el estudio teórico de técnicas de procesamiento de imágenes y datos para el reconocimiento automático de hojas para la clasificación de plantas. Doce características de las plantas fueron extraídas y distribuidas en cinco variables principales que constituían el vector de entrada de una red neuronal artificial probabilista, que había sido entrenada con 1800 hojas para clasificar 32 tipos de plantas con una precision superior al 90\%, el autor asegura que su metodología de implementación de la PNN era fácil y rápida en comparación de otras investigaciones similares.\\
 
 En el año 2017, Bernal N realizó un estudio de campo con el cultivo de papa criolla para evaluar la influencia de la densidad de siembra asociada a distancias entre plantas de 30,40 y 50 cm y distancias entre surcos de 100 cm sobre el conteo de tubérculos de calibres inferiores a 2 cm, entre 2 y 4 cm, entre 4 y 6 cm, y de mas de 6 cm de diámetro ponderado y sobre el peso fresco en gramos de los tubérculos. Los tubérculos cosechados se clasificaron y contaron mediante tamizado y se pesaron en su totalidad sin discriminar por calibre. Los modelos estadísticos empleados para modelar el comportamiento de la cosecha, evidenciaron el efecto significativo de la densidad de siembra sobre el conteo de tubérculos y calibre y se observo una razón aproximada de 40:40:20:1 desde el calibre menor al mayor. El efecto de la competición, en todos los modelos probados resulto significativo, aumentando en la mayoría de los casos a medida que disminuía la distancia entre plantas, tanto en el patrón de vecindad intrahileras como en el caso de inter e intrahileras.
 
@@ -15,29 +14,59 @@ En el año 2017, Bernal N realizó un estudio de campo con el cultivo de papa cr
 
 \subsection{Papa criolla (\textit{Solanum Phureja}).}
 
-Las variables que influyen en el rendimiento de la papa pueden ser observados en la figura 2.1 \ref{fig:arch}. Pag.\pageref{fig:arch}.\\
+\textit{Solanum tuberosum} grupo \textit{phureja}, o papa criolla, hace referencia a los fenotipos conocidos como yema de huevo, los cuales presentan color de piel y carne amarilla (Rodriguez \textit{et al.}, 2009). La estructura de la planta y los fenotipos puede ser observado en la figura \ref{fig:planta}.\\
+
 \begin{figure}[h]
-	\caption{Variables de influencia sobre el rendimiento de Solanum Phureja.}
+	\caption{Estructura de la planta \textit{Solanum phureja}.}
+	\centering
+	\includegraphics[scale=0.8]{planta.jpeg}
+	\label{fig:planta}
+\end{figure}
+
+Las plantas de papa criolla (\textit{Solanum phureja}) suelen ser sembradas en calles separadas por una determinada distancia que es lo que se conoce como la densidad de siembra y generalmente con espacios entre surcos de un metro (Bernal, 2017). En la figura \ref{fig:surcos} son identificadas las calles y los surcos en un sembradío. \\
+
+\begin{figure}[h]
+	\caption{Sembradío de \textit{Solanum phureja}.}
+	\centering
+	\includegraphics[scale=1]{surcos.jpeg}
+	\label{fig:surcos}
+\end{figure}
+
+En los cultivos de papa criolla (\textit{Solanum phureja}) son muchas las variables que influyen en la cosecha de los tubérculos, tales como la temperatura, la altura del terreno, el clima, el tipo y la composición del suelo, la densidad de siembra, entre otros. Y de ellas dependen el crecimiento de los tubérculos producidos por la planta (Bernal, 2017). Las variables que influyen en el rendimiento de la papa pueden ser observados en la figura \ref{fig:variablesPapa}. \\
+
+\begin{figure}[h]
+	\caption{Variables de influencia sobre el rendimiento de \textit{Solanum phureja}.}
 	\centering
 	\includegraphics[scale=0.5]{variables.png}
-	\label{fig:arch}
+	\label{fig:variablesPapa}
 \end{figure}
+
 
 \subsection{Redes neuronales artificiales.}
 
-Una red neuronal artificial,  es un conjunto de nodos de un programa (neuronas) interconectados entre si, simulando el proceso de pensamiento humano, se pudiera considerar como una caja negra entrenada previamente para esperar una entrada y basado en las características o comportamiento de la misma proporcionar una determinada salida, eliminando así la necesidad de diferentes algoritmos que deban analizar comportamientos cada uno por separado. Una red neuronal probabilística (PNN) no es mas que una ANN que usa funciones estadísticas que escalan la variable no linealmente como una forma de campana o una distribución normal (Stephen, 2007).\\
+Una red neuronal artificial,  es un conjunto de nodos de un programa (neuronas) interconectados entre si, simulando el proceso de pensamiento humano, se pudiera considerar como una caja negra entrenada previamente para esperar una entrada y basado en las características o comportamiento de la misma proporcionar una determinada salida, eliminando así la necesidad de diferentes algoritmos que deban analizar comportamientos cada uno por separado (Stephen, 2007).\\
 
 Entre las definiciones más recientes de inteligencia artificial se expresa, en forma general, la inteligencia artificial como la capacidad que tienen las máquinas para realizar tareas que en el momento son realizadas por seres humanos; otros autores como Nebendah (1988) y Delgado (1998) dan definiciones más completas y las definen como el campo de estudio que se enfoca en la explicación y emulación de la conducta inteligente en función de procesos computacionales basados en la experiencia y el conocimiento continuo del ambiente. Autores como Marr (1977), Mompin (1987), Rolston (1992), en sus definiciones involucran los términos de soluciones a problemas muy complejos.\\
 
 El nacimiento de la inteligencia artificial se sitúa en los años cincuenta; en esa fecha la informática apenas se había desarrollado, y ya se planteaba la posibilidad de diseñar máquinas inteligentes. Hoy en día se habla de vida artificial, algoritmos genéticos, computación molecular o redes neuronales. En algunas de estas ramas los resultados teóricos van muy por encima de las realizaciones prácticas.\\
 
-A través de los años, se han utilizado diversas técnicas de inteligencia artificial para emular ``comportamientos inteligentes''. Al software que hace uso de dichas técnicas se le denomina, de forma genérica, ``sistema inteligente'', y es cada vez más amplia la gama de aplicaciones financieras donde incide la inteligencia artificial.\\
+A través de los años, se han utilizado diversas técnicas de inteligencia artificial para emular ``comportamientos inteligentes''. Al software que hace uso de dichas técnicas se le denomina, de forma genérica, ``sistema inteligente'', y es cada vez más amplia la gama de aplicaciones donde incide la inteligencia artificial.\\
 
-Un ejemplo de esto es que al usarse una tarjeta de crédito, suelen acumularse datos sobre patrones de consumo que después se venderán a diversas empresas. Sobre la base de los pagos efectuados en dicha tarjeta de crédito, los bancos e instituciones de crédito irán elaborando un historial del usuario, el cual se utilizará para autorizar una transacción, para decidir cuándo extender el crédito y para detectar fraudes. Este tipo de procesos requiere de chequeos que suelen resultar bastante complejos, además del uso de criterios variables para poder tomar una decisión final en torno a la autorización de una cierta transacción. Claro que, al manejar enormes volúmenes de información, como los aproximadamente 16 millones de transacciones que Visa Internacional debe verificar diariamente, no resulta nada fácil poder detectar un fraude. Aunque es evidente la necesidad de automatizar procesos como éste, no es del todo obvio incorporar el comportamiento inteligente del ser humano a un programa de computadora que reemplace a un evaluador humano, ya que los sistemas de inteligencia artificial se toman como herramientas de apoyo analítico para el evaluador, mas no como una unidad autosuficiente que por sí sola pueda tomar decisiones.\\
-
-Las redes neuronales artificiales son eficientes en tareas tales como el reconocimiento de patrones, problemas de optimización o clasificación, y se pueden integrar en un sistema de ayuda a la toma de decisiones, pero no son una panacea capaz de resolver todos los problemas: todo lo contrario, son modelos muy especializados que pueden aplicarse en dominios muy concretos.\\
+Las redes neuronales artificiales son eficientes en tareas tales como: el reconocimiento de patrones, problemas de optimización o clasificación, y se pueden integrar en un sistema de ayuda a la toma de decisiones, pero no son una panacea capaz de resolver todos los problemas: todo lo contrario, son modelos muy especializados que pueden aplicarse en dominios muy concretos.\\
 
 Las redes neuronales emulan la estructura y el comportamiento del cerebro, utilizando los procesos de aprendizaje para buscar una solución a diferentes problemas; son un conjunto de algoritmos matemáticos que encuentran las relaciones no lineales entre conjuntos de datos; suelen ser utilizadas como herramientas para la predicción de tendencias y como clasificadoras de conjuntos de datos. Se denominan neuronales porque están basadas en el funcionamiento de una neurona biológica cuando procesa información.
+
+\subsection{Redes neuronales probabilísticas.}
+
+Las redes neuronales se utilizan para referirse a una amplia clase de modelos y algoritmos. Las neuronas ocultas se generan en base a alguna combinación de los datos observados, similar a una expansión de base en otras técnicas estadísticas. Sin embargo, en lugar de elegir la forma de la expansión, los pesos utilizados para crear las neuronas ocultas se calculan a partir de los datos. Las redes neuronales pueden implicar una variedad de funciones de activación, que son las transformaciones de las entradas de datos brutos ponderados para crear las neuronas ocultas (Wiley, 2016).\\
+
+Una red neuronal probabilística (PNN) no es mas que una ANN que usa funciones estadísticas que escalan la variable no linealmente como una forma de campana o una distribución normal (Stephen, 2007).\\
+
+Una opción común para las funciones de activación de las redes neuronales es la función sigmoide: $\sigma\left(x\right)=\frac{1}{1+e^{-x}}$ y la función tangente hiperbólica $f\left(x\right)=tanh(x)$. Sin embargo para las redes neuronales probabilísticas que la decisión de cada una de sus neuronas está basada en probabilidades se suelen usar funciones de base radial y aunque suelen existir una variedad de ellas, las PNN usan la forma \textit{Gaussiana}: 
+
+\[
+ f\left(x\right) = exp(-\frac{|| x-c ||^2}{2\sigma^{2}})
+ \]
 
 \subsection{Curvas ROC.}
 
@@ -45,11 +74,11 @@ Una amplia gama de tests diagnósticos reportan sus resultados cuantitativamente
 
 \subsection{Lenguaje R.}
 
-R es un conjunto  integrado de \textit{software} de código abierto para el almacenamiento, manipulación, cálculo y visualización de datos para computación y gráficación estadística, puede ser compilado y ejecutado en  en Windows, Mac OS X y otras  plataformas UNIX (como Linux), se distribuye usualmente en formato binario (\url{https://www.r-project.org/about.html}, 2018). El proyecto de \emph{software} R fue iniciado por Robert Gentleman y Ross Ihaka. El lenguaje fue influenciado por  lenguaje S desarrollado originalmente en \textit{Bell Laboratories} por John Chambers y sus colegas. Desde entonces ha evolucionado  para el cálculo estadístico asociado a diversas disciplinas para contextos académicos y comerciales. En R, la unidad fundamental de código compartible es el paquete, el cual agrupa código, datos, documentación y pruebas, y resulta simple de compartir con otros. Para enero del 2015 ya habían más de 6.000 paquetes disponibles en la Red Integral de Archivos de R, conocido comúnmente por su acrónimo CRAN, el cual es el repositorio de paquetes . Esta gran variedad de paquetes es una de las razones por las cuales R es tan exitoso, pues es probable que algún investigador o académico ya haya resuelto un problema en su propio campo usando esta herramienta, por lo que otros usuarios simplemente podrán recurrir a ella para su uso directo o para llamarla en un nuevo código (Wickham,2015). \\
+R es un conjunto integrado de \textit{software} de código abierto para el almacenamiento, manipulación, cálculo y visualización de datos para computación y gráficación estadística, puede ser compilado y ejecutado en Windows, Mac OS X y otras plataformas UNIX (como Linux), se distribuye usualmente en formato binario (\url{https://www.r-project.org/about.html}, 2018). El proyecto de \emph{software} R fue iniciado por Robert Gentleman y Ross Ihaka. El lenguaje fue influenciado por  lenguaje S desarrollado originalmente en \textit{Bell Laboratories} por John Chambers y sus colegas. Desde entonces ha evolucionado  para el cálculo estadístico asociado a diversas disciplinas para contextos académicos y comerciales. En R, la unidad fundamental de código compartible es el paquete, el cual agrupa código, datos, documentación y pruebas, y resulta simple de compartir con otros. Para enero del 2015 ya habían más de 6.000 paquetes disponibles en la Red Integral de Archivos de R, conocido comúnmente por su acrónimo CRAN, el cual es el repositorio de paquetes . Esta gran variedad de paquetes es una de las razones por las cuales R es tan exitoso, pues es probable que algún investigador o académico ya haya resuelto un problema en su propio campo usando esta herramienta, por lo que otros usuarios simplemente podrán recurrir a ella para su uso directo o para llamarla en un nuevo código (Wickham,2015). \\
 
 \subsection{Estructura de paquetes en R/RStudio.}
 
-Requerimiento del núcleo (\textit{core})
+Los requerimientos de núcleo (\textit{core}) para que un desarrollo de software pueda considerarse y compilarse como un paquete de lenguaje R debe cumplir con las siguiente estructura.\\
 
 \begin{enumerate}
   \item  DESCRIPTION: metadatos del package.\\
